@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>智慧党建</name>
-    <description>智慧党建</description>
+    <name>莒县智慧党建</name>
+    <description>莒县智慧党建</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">潘维吉</author>
     <content src="index.html" />
     <access origin="*" />
