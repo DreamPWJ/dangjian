@@ -21,12 +21,12 @@ page-home {
     margin: 0;
     padding: 0;
     border: none;
-    -webkit-box-shadow: 0 0 0 10px #D73C51,
-    0 0 0 16px #FFCD47,
-    0 2px 5px 16px rgba(0, 0, 0, .6);
-    box-shadow: 0 0 0 10px #D73C51,
-    0 0 0 16px #FFCD47,
-    0 2px 5px 16px rgba(0, 0, 0, .6);
+    -webkit-box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5),
+    0 0 0 16px #fff,
+    0 5px 5px 16px rgba(0, 0, 0, .6);
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5),
+    0 0 0 16px #fff,
+    0 5px 5px 16px rgba(0, 0, 0, .6);
   }
   .main-show a {
     display: block;
