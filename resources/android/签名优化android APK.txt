@@ -1,0 +1,36 @@
+#keystore安全存储签名密匙文件生成配置  密钥库密码短语:
+keytool -genkey -v -keystore boolv.recycle.keystore -alias boolv.recycle -keyalg RSA -keysize 2048 -validity 10000
+#查看应用签名信息命令  SHA1信息是应用签名
+keytool -list -v -keystore boolv.recycle.keystore
+
+#签名优化android APK  命令
+
+#签名应用文件命令
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore  boolv.recycle.keystore android-release-unsigned.apk boolv.recycle
+
+#优化已签名APK文件 减少占用空间和内存 （'zipalign' 不是内部或外部命令，也不是可运行的程序 D:\androidsdk\tools 下面缺少zipalign.exe 去D:\androidsdk\build-tools\25.0.1下面复制）
+zipalign -v 4 android-release-unsigned.apk boolv.recycle.apk
+
+
+#启动全屏显示白色背景
+Theme.Light.NoTitleBar.Fullscreen
+
+#支付宝支付相关       <resource-file src="src/ios/lib/AlipaySDK.bundle"/> 插件路径错了
+PID:
+
+cordova plugin add https://github.com/offbye/cordova-plugin-alipay.git --variable PARTNER_ID=2088721190793524
+
+#微信   公众号支付授权目录  http://s.boolv.com/#/pay/  http://s.boolv.com/#/tab/
+cordova plugin add cordova-plugin-wechat --variable wechatappid=
+
+#QQ
+cordova plugin add https://github.com/iVanPan/Cordova_QQ.git --variable QQ_APP_ID=
+
+#微博
+cordova plugin add https://github.com/iVanPan/cordova_weibo.git --variable WEIBO_APP_ID=
+
+#极光推送
+cordova plugin add https://github.com/jpush/jpush-phonegap-plugin.git --variable APP_KEY=
+
+#高德地图Android定位SDK
+cordova plugin add https://github.com/DaiHuaXieHuaKai/GaoDeLocation.git --variable API_KEY=
