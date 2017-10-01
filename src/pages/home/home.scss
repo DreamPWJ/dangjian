@@ -2,10 +2,14 @@ page-home {
   .main {
     position: relative;
     height: 100%;
-    background: url('../../assets/img/main/main-bg.png') #f53d3d;
+    background: url(../assets/img/main/main-bg.png) #f53d3d no-repeat center center fixed;
+    -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
-    /*   filter:sepia(1) saturate(4) hue-rotate(295deg);*/
     padding: 3rem;
+  }
+  .img-logo {
+    width: 60rem;
+    height: 10rem;
   }
   .main-show {
     width: 80%;
