@@ -5,17 +5,41 @@ page-home {
     background: url(../assets/img/main/main-bg.png) #f53d3d no-repeat center center fixed;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
-    padding: 3rem;
   }
   .img-logo {
     width: 60rem;
     height: 10rem;
   }
+  .top-btn a {
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  }
+  .top-btn a:hover, .top-btn a:active {
+    background-color: #f26604;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 1;
+    -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+  }
+
+  .top-btn .icon {
+    font-size: 5rem;
+  }
+  .top-btn h3, .top-btn .icon {
+    margin: 0.3rem;
+    color: #fff;
+  }
+
   .main-show {
     width: 80%;
     padding: 2rem 0;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
@@ -25,16 +49,16 @@ page-home {
     margin: 0;
     padding: 0;
     border: none;
-    -webkit-box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5),
+    -webkit-box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3),
     0 0 0 16px #fff,
     0 5px 5px 16px rgba(0, 0, 0, .6);
-    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5),
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3),
     0 0 0 16px #fff,
     0 5px 5px 16px rgba(0, 0, 0, .6);
   }
   .main-show a {
     display: block;
-    margin: 1.5rem 0;
+    margin: 2.5rem 0;
     padding: 1rem;
     border-radius: 1rem;
     text-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
@@ -52,7 +76,7 @@ page-home {
     }*/
 
   .main-show .icon {
-    font-size: 9rem;
+    font-size: 8rem;
   }
   .main-show h2, .main-show .icon {
     margin: 0;
