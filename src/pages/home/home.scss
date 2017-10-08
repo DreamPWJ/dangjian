@@ -7,12 +7,17 @@ page-home {
     background-size: 100% 100%;
   }
   .img-logo {
-    width: 60rem;
-    height: 10rem;
+    margin: 0.8rem 0;
+    width: 42rem;
+    height: 7rem;
+  }
+  .top-btn {
+    width: 90%;
+    margin: 0.6rem auto;
   }
   .top-btn a {
     display: inline-block;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 1rem;
     text-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
     -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
@@ -34,15 +39,15 @@ page-home {
     margin: 0.3rem;
     color: #fff;
   }
-
   .main-show {
     width: 90%;
+    margin: auto;
     padding: 2rem 0;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+    /*    position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);*/
     /*    background-color: #1e87ea;*/
   }
   .main-show video {
@@ -50,17 +55,17 @@ page-home {
     padding: 0;
     background-color: #000;
     border: none;
-    -webkit-box-shadow:
-    0 0 0 10px #fff,
+    border-radius: 6px;
+    max-height: 55vh;
+    -webkit-box-shadow: 0 0 0 10px #fff,
     0 3px 5px 10px rgba(0, 0, 0, .6);
-    box-shadow:
-    0 0 0 10px #fff,
+    box-shadow: 0 0 0 10px #fff,
     0 3px 5px 10px rgba(0, 0, 0, .6);
   }
   .main-show a {
     display: block;
     margin: 2.5rem 1rem;
-    padding:2rem 1rem;
+    padding: 2rem 1rem;
     border-radius: 1rem;
     text-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
     -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
@@ -79,7 +84,7 @@ page-home {
   .main-show .icon {
     font-size: 8rem;
   }
-  .main-show h2, .main-show .icon {
+  .main-show h3, .main-show .icon {
     margin: 0;
     color: #fff;
   }
