@@ -23,7 +23,7 @@ page-home {
     -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
     box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   }
-  .top-btn a:hover, .top-btn a:active {
+  .top-btn a:hover, .top-btn a:active,.top-btn a:focus {
     background-color: #f23a07;
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
@@ -72,7 +72,7 @@ page-home {
     -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
   }
-  .main-show a:hover, .main-show a:active {
+  .main-show a:hover, .main-show a:active,.main-show a:focus {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     opacity: 0.9;
