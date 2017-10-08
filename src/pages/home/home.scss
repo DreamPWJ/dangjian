@@ -48,13 +48,14 @@ page-home {
   .main-show video {
     margin: 0;
     padding: 0;
+    background-color: #000;
     border: none;
     -webkit-box-shadow:
     0 0 0 10px #fff,
-    0 5px 5px 10px rgba(0, 0, 0, .6);
+    0 3px 5px 10px rgba(0, 0, 0, .6);
     box-shadow:
     0 0 0 10px #fff,
-    0 5px 5px 10px rgba(0, 0, 0, .6);
+    0 3px 5px 10px rgba(0, 0, 0, .6);
   }
   .main-show a {
     display: block;
