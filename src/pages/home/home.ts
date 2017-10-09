@@ -6,12 +6,16 @@ import {NavController} from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  public  domain :string="http://jxdj.rzzyfw.com"
-  public  videoUrl: string = "http://jxdj1.rzzyfw.com/upload/dy/yyzls/1.mp4";
-  public  typeFlag: number = 0;
+  public domain: string = "http://jxdj.rzzyfw.com"
+  public videoUrl: string = "http://jxdj1.rzzyfw.com/upload/dy/yyzls/1.mp4";
+  public typeFlag: number = 0;
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HomePage');
   }
 
   //类型切换

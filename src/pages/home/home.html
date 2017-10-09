@@ -13,7 +13,7 @@
     </ion-row>
     <ion-row class="top-btn" justify-content-around text-center>
       <ion-col>
-        <a tabindex="0" (click)="liveStreaming(0)">
+        <a tabindex="1" (click)="liveStreaming(0)">
           <ion-icon class="icon-homefill"></ion-icon>
           <h3>党建首页</h3>
         </a>
@@ -118,20 +118,20 @@
     </ion-row>
 
     <ion-row *ngIf="typeFlag==2" class="main-show sanwu" justify-content-center align-items-center text-center>
-      <ion-col col-2>
+      <ion-col col-3>
         <a tabindex="7" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=110" class="positive-bg">
           <ion-icon class="icon-activityfill"></ion-icon>
           <h3>党务公开</h3>
         </a>
       </ion-col>
-      <ion-col col-2>
+      <ion-col col-3>
         <a tabindex="8" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=111" class="balanced-bg">
           <ion-icon class="icon-babyfill"></ion-icon>
           <h3>政务公开</h3>
         </a>
       </ion-col>
 
-      <ion-col col-2>
+      <ion-col col-3>
         <a tabindex="9" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=112" class="yellow-bg">
           <ion-icon class="icon-sponsorfill"></ion-icon>
           <h3>财务公开</h3>
