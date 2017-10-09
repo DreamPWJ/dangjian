@@ -37,8 +37,9 @@ page-home {
     -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
     box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   }
-  .top-btn a:hover, .top-btn a:active, .top-btn a:focus {
-    background-color: #f23a07;
+
+  @mixin top-btn-focus {
+    background-color: #f23a07!important;
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     opacity: 1;
@@ -46,6 +47,12 @@ page-home {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
   }
 
+  .top-btn a:hover, .top-btn a:active, .top-btn a:focus {
+    @include top-btn-focus;
+  }
+  .top-btn-actived {
+    @include top-btn-focus;
+  }
   .top-btn .icon {
     font-size: 5.5rem;
   }

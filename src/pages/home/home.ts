@@ -16,10 +16,12 @@ export class HomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
+    this.typeFlag=Number(localStorage.getItem("topTypeFlag"))||0;
   }
 
   //类型切换
   typeSwitch(type) {
+    localStorage.setItem("topTypeFlag",type);
     if (type == 1) {  //智慧党建
       this.typeFlag = 1
     } else if (type == 2) { //三务公开

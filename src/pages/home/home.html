@@ -13,19 +13,19 @@
     </ion-row>
     <ion-row class="top-btn" justify-content-around text-center>
       <ion-col>
-        <a tabindex="1" (click)="liveStreaming(0)">
+        <a tabindex="1" (click)="liveStreaming(0)" class="{{typeFlag==0?'top-btn-actived':''}}">
           <ion-icon class="icon-homefill"></ion-icon>
           <h3>党建首页</h3>
         </a>
       </ion-col>
       <ion-col>
-        <a tabindex="1" (click)="typeSwitch(1)">
+        <a tabindex="1" (click)="typeSwitch(1)" class="{{typeFlag==1?'top-btn-actived':''}}">
           <ion-icon name="star"></ion-icon>
           <h3>智慧党建</h3>
         </a>
       </ion-col>
       <ion-col>
-        <a tabindex="2" (click)="typeSwitch(2)">
+        <a tabindex="2" (click)="typeSwitch(2)" class="{{typeFlag==2?'top-btn-actived':''}}">
           <ion-icon name="mail-open"></ion-icon>
           <h3>三务公开</h3>
         </a>
