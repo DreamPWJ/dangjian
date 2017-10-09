@@ -42,7 +42,8 @@ export class HomePage {
   //视频切换
   liveStreaming(type) {
     if (type == 0) {  //主页
-      this.typeFlag = 0
+      this.typeFlag = 0;
+      localStorage.setItem("topTypeFlag",'0');
       this.videoUrl = "http://jxdj1.rzzyfw.com/upload/dy/yyzls/1.mp4"
     } else if (type == 1) { //直播
       this.videoUrl = "http://u166.auto.s.wanglitiaoyi.com/live/3693838317.m3u8"
