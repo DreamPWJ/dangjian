@@ -138,6 +138,12 @@
         </a>
       </ion-col>
     </ion-row>
+
+    <ion-row *ngIf="typeFlag==6" class="main-show hongse" justify-content-center align-items-center text-center>
+      <video col-6 controls="controls" autoplay="autoplay" src="{{videoUrl}}">
+      </video>
+
+    </ion-row>
   </ion-grid>
 
 </ion-content>
