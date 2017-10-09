@@ -7,8 +7,8 @@ import {NavController} from 'ionic-angular';
 })
 export class HomePage {
   public  domain :string="http://jxdj.rzzyfw.com"
-  videoUrl: string = "http://jxdj1.rzzyfw.com/upload/dy/yyzls/1.mp4";
-  typeFlag: number = 0;
+  public  videoUrl: string = "http://jxdj1.rzzyfw.com/upload/dy/yyzls/1.mp4";
+  public  typeFlag: number = 0;
 
   constructor(public navCtrl: NavController) {
 

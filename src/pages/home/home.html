@@ -83,37 +83,59 @@
     <ion-row *ngIf="typeFlag==1" class="main-show dangjian" justify-content-around align-items-center text-center>
       <ion-col col-3>
         <a tabindex="7" href="{{domain}}/weixin2/dianshi/qiaoshan/ht/selectxiehui.aspx" class="energized-bg">
-          <ion-icon name="videocam"></ion-icon>
+          <ion-icon class="icon-recordfill"></ion-icon>
           <h3>会议直播</h3>
         </a>
         <a tabindex="8" href="{{domain}}/weixin2/dianshi/qiaoshan/ht/selectxiehui.aspx" class="royal-bg">
-          <ion-icon name="logo-youtube"></ion-icon>
+          <ion-icon class="icon-video_fill_light"></ion-icon>
           <h3>视频监控</h3>
         </a>
       </ion-col>
 
       <ion-col col-3>
         <a tabindex="9" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=107" class="calm-bg">
-          <ion-icon class="icon-homefill"></ion-icon>
+          <ion-icon class="icon-read"></ion-icon>
           <h3>学习教育</h3>
         </a>
         <a tabindex="10" href="https://www.dtdjzx.gov.cn/" class="balanced-bg">
-          <ion-icon name="logo-youtube"></ion-icon>
+          <ion-icon class="icon-creative"></ion-icon>
           <h3>灯塔在线</h3>
         </a>
       </ion-col>
 
       <ion-col col-3>
-        <a tabindex="11" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=108" class="calm-bg">
-          <ion-icon class="icon-homefill"></ion-icon>
+        <a tabindex="11" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=108" class="positive-bg">
+          <ion-icon class="icon-phone"></ion-icon>
           <h3>联系服务群众</h3>
         </a>
-        <a tabindex="12" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=109" class="balanced-bg">
-          <ion-icon name="logo-youtube"></ion-icon>
+        <a tabindex="12" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=109" class="assertive-bg">
+          <ion-icon class="icon-servicefill"></ion-icon>
           <h3>工作督查通报</h3>
         </a>
 
 
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="typeFlag==2" class="main-show sanwu" justify-content-center align-items-center text-center>
+      <ion-col col-2>
+        <a tabindex="7" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=110" class="positive-bg">
+          <ion-icon class="icon-activityfill"></ion-icon>
+          <h3>党务公开</h3>
+        </a>
+      </ion-col>
+      <ion-col col-2>
+        <a tabindex="8" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=111" class="balanced-bg">
+          <ion-icon class="icon-babyfill"></ion-icon>
+          <h3>政务公开</h3>
+        </a>
+      </ion-col>
+
+      <ion-col col-2>
+        <a tabindex="9" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=112" class="yellow-bg">
+          <ion-icon class="icon-sponsorfill"></ion-icon>
+          <h3>财务公开</h3>
+        </a>
       </ion-col>
     </ion-row>
   </ion-grid>
