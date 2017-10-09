@@ -7,11 +7,11 @@ page-home {
     background: #f53d3d no-repeat center center fixed;
   }
 
-  $animal-list: 0, 1, 2, 3;
+  $animal-list: 0, 1, 2, 3, 4, 5, 6;
   @each $animal in $animal-list {
     .main-#{$animal} {
       @include main;
-      background-image: url('../assets/img/main/#{$animal}.jpeg');
+      background-image: url('../assets/img/main/#{$animal}.jpg');
     }
   }
 

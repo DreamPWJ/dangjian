@@ -19,6 +19,14 @@ export class HomePage {
       this.typeFlag = 1
     } else if (type == 2) { //三务公开
       this.typeFlag = 2
+    } else if (type == 3) { //党员之家
+      this.typeFlag = 3
+    } else if (type == 4) { //精准扶贫
+      this.typeFlag = 4
+    } else if (type == 5) { //大美莒县
+      this.typeFlag = 5
+    } else if (type == 6) { //红色影院
+      this.typeFlag = 6
     } else {//主页
       this.typeFlag = 0
     }
