@@ -14,7 +14,9 @@ page-home {
       background-image: url('../assets/img/main/#{$animal}.jpg');
     }
   }
-
+  .grid {
+    height: 100%;
+  }
   .img-logo {
     margin: 0.8rem 0;
     width: 42rem;
