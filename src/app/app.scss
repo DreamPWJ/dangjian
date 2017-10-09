@@ -1,5 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -15,38 +14,87 @@
 // automatically applied to the <body> element in the app.
 @import "../assets/fonts/iconfont.scss";
 
+.full-screen {
+  width: 100%;
+  height: 100%;
+}
+
+.light {
+  color: #fff!important;
+}
+
+.stable {
+  color: #f8f8f8!important;
+}
+
+.positive {
+  color: #00ACFF!important;
+}
+
+.calm {
+  color: #11c1f3!important;
+}
+
+.balanced {
+  color: #33cd5f!important;
+}
+
+.energized {
+  color: #f26604!important;
+}
+
+.yellow {
+  color: #f2cb20!important;
+}
+
+.assertive {
+  color: #ef473a!important;
+}
+
+.royal {
+  color: #886aea!important;
+}
+
+.dark {
+  color: #444!important;
+}
+
 .light-bg {
-  background-color: #fff
+  background-color: #fff!important;
 }
 
 .stable-bg {
-  background-color: #f8f8f8
+  background-color: #f8f8f8!important;
 }
 
 .positive-bg {
-  background-color: #00ACFF
+  background-color: #00ACFF!important;
 }
 
 .calm-bg {
-  background-color: #11c1f3
+  background-color: #11c1f3!important;
 }
 
 .balanced-bg {
-  background-color: #33cd5f
+  background-color: #33cd5f!important;
 }
 
 .energized-bg {
-  background-color: #f26604
+  background-color: #f26604!important;
+}
+
+.yellow-bg  {
+  background-color: #f2cb20!important;
 }
 
 .assertive-bg {
-  background-color: #ef473a
+  background-color: #ef473a!important;
 }
 
 .royal-bg {
-  background-color: #886aea
+  background-color: #886aea!important;
 }
 
 .dark-bg {
-  background-color: #444
+  background-color: #444!important;
 }

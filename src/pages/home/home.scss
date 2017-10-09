@@ -1,9 +1,11 @@
 page-home {
+
   @mixin main {
     position: relative;
+    width: 100%;
     height: 100%;
-    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;
+    -webkit-background-size:cover;
+    background-size:cover;
     background: #f53d3d no-repeat center center fixed;
   }
 
@@ -11,7 +13,7 @@ page-home {
   @each $animal in $animal-list {
     .main-#{$animal} {
       @include main;
-      background-image: url('../assets/img/main/#{$animal}.jpg');
+      background-image: url(../assets/img/main/#{$animal}.jpg);
     }
   }
   .grid {
@@ -30,6 +32,7 @@ page-home {
     display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
+    background-color: rgba(255,255,255,0.1);
     text-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
     -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
     box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
@@ -44,7 +47,7 @@ page-home {
   }
 
   .top-btn .icon {
-    font-size: 5rem;
+    font-size: 5.5rem;
   }
   .top-btn h3, .top-btn .icon {
     margin: 0.3rem;
@@ -86,6 +89,7 @@ page-home {
   .main-show a:hover, .main-show a:active, .main-show a:focus {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+    border: 3px solid #fff;
     opacity: 0.9;
   }
   /*  .main-show a.energized-bg-linear {
