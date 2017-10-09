@@ -21,6 +21,7 @@ export class HomePage {
 
   //类型切换
   typeSwitch(type) {
+    event.preventDefault();
     localStorage.setItem("topTypeFlag",type);
     if (type == 1) {  //智慧党建
       this.typeFlag = 1
@@ -41,6 +42,7 @@ export class HomePage {
 
   //视频切换
   liveStreaming(type) {
+    event.preventDefault();
     if (type == 0) {  //主页
       this.typeFlag = 0;
       localStorage.setItem("topTypeFlag",'0');

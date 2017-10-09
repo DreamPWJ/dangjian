@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>-->
 
-<ion-content class="main-{{typeFlag}}">
+<ion-content fullscreen="true" class="main-{{typeFlag}}">
   <ion-grid class="grid">
     <ion-row>
       <ion-col text-center>
@@ -15,43 +15,43 @@
       <ion-col>
         <a tabindex="1" (click)="liveStreaming(0)" class="{{typeFlag==0?'top-btn-actived':''}}">
           <ion-icon class="icon-homefill"></ion-icon>
-          <h3>党建首页</h3>
+          <h3 text-nowrap>党建首页</h3>
         </a>
       </ion-col>
       <ion-col>
         <a tabindex="1" (click)="typeSwitch(1)" class="{{typeFlag==1?'top-btn-actived':''}}">
-          <ion-icon class="icon-favorfill"></ion-icon>
-          <h3>智慧党建</h3>
+          <ion-icon class="icon-dangjian"></ion-icon>
+          <h3 text-nowrap>智慧党建</h3>
         </a>
       </ion-col>
       <ion-col>
         <a tabindex="2" (click)="typeSwitch(2)" class="{{typeFlag==2?'top-btn-actived':''}}">
           <ion-icon name="mail-open"></ion-icon>
-          <h3>三务公开</h3>
+          <h3 text-nowrap>三务公开</h3>
         </a>
       </ion-col>
       <ion-col>
         <a tabindex="3" (click)="typeSwitch(3)" class="{{typeFlag==3?'top-btn-actived':''}}">
           <ion-icon class="icon-friendfill"></ion-icon>
-          <h3>党员之家</h3>
+          <h3 text-nowrap>党员之家</h3>
         </a>
       </ion-col>
       <ion-col>
         <a tabindex="4" (click)="typeSwitch(4)" class="{{typeFlag==4?'top-btn-actived':''}}">
           <ion-icon class="icon-sponsorfill"></ion-icon>
-          <h3>精准扶贫</h3>
+          <h3 text-nowrap>精准扶贫</h3>
         </a>
       </ion-col>
       <ion-col>
         <a tabindex="5" (click)="typeSwitch(5)" class="{{typeFlag==5?'top-btn-actived':''}}">
-          <ion-icon name="cloudy"></ion-icon>
-          <h3>大美莒县</h3>
+          <ion-icon class="icon-shanshui"></ion-icon>
+          <h3 text-nowrap>大美莒县</h3>
         </a>
       </ion-col>
       <ion-col>
         <a tabindex="6" (click)="typeSwitch(6)" class="{{typeFlag==6?'top-btn-actived':''}}">
-          <ion-icon name="film"></ion-icon>
-          <h3>红色影院</h3>
+          <ion-icon class="icon-yingyuan"></ion-icon>
+          <h3 text-nowrap>红色影院</h3>
         </a>
       </ion-col>
     </ion-row>
@@ -59,11 +59,11 @@
       <ion-col col-2>
         <a tabindex="7" class="energized-bg" (click)="liveStreaming(1)">
           <ion-icon name="videocam"></ion-icon>
-          <h3>视频直播</h3>
+          <h3 text-nowrap>视频直播</h3>
         </a>
         <a tabindex="8" class="royal-bg" (click)="liveStreaming(1)">
           <ion-icon name="logo-youtube"></ion-icon>
-          <h3>视频录播</h3>
+          <h3 text-nowrap>视频录播</h3>
         </a>
       </ion-col>
 
@@ -72,11 +72,11 @@
       <ion-col col-2>
         <a tabindex="9" class="calm-bg" (click)="liveStreaming(0)">
           <ion-icon class="icon-homefill"></ion-icon>
-          <h3>主页</h3>
+          <h3 text-nowrap>主页视频</h3>
         </a>
         <a tabindex="10" class="balanced-bg" (click)="liveStreaming(1)">
           <ion-icon name="logo-youtube"></ion-icon>
-          <h3>视频录播</h3>
+          <h3 text-nowrap>视频录播</h3>
         </a>
       </ion-col>
     </ion-row>
@@ -87,7 +87,7 @@
           <h3>会议直播</h3>
         </a>
         <a tabindex="8" href="{{domain}}/weixin2/dianshi/qiaoshan/ht/selectxiehui.aspx" class="royal-bg">
-          <ion-icon class="icon-video_fill_light"></ion-icon>
+          <ion-icon class="icon-jiankong"></ion-icon>
           <h3>视频监控</h3>
         </a>
       </ion-col>
@@ -98,7 +98,7 @@
           <h3>学习教育</h3>
         </a>
         <a tabindex="10" href="https://www.dtdjzx.gov.cn/" class="balanced-bg">
-          <ion-icon class="icon-creative"></ion-icon>
+          <ion-icon class="icon-dengtalighthouse1"></ion-icon>
           <h3>灯塔在线</h3>
         </a>
       </ion-col>
@@ -120,7 +120,7 @@
     <ion-row *ngIf="typeFlag==2" class="main-show sanwu" justify-content-center align-items-center text-center>
       <ion-col col-3>
         <a tabindex="7" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=110" class="positive-bg">
-          <ion-icon class="icon-activityfill"></ion-icon>
+          <ion-icon class="icon-dangwugongkai"></ion-icon>
           <h3>党务公开</h3>
         </a>
       </ion-col>
