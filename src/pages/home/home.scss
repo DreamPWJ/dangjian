@@ -1,5 +1,4 @@
 page-home {
-
   @mixin main {
     position: relative;
     width: 100%;
@@ -16,18 +15,22 @@ page-home {
       background-image: url(../assets/img/main/#{$animal}.jpg);
     }
   }
+
   .grid {
     height: 100%;
   }
+
   .img-logo {
     margin: 0.8rem 0;
     width: 42rem;
     height: 7rem;
   }
+
   .top-btn {
     width: 96%;
     margin: 0.5rem auto;
   }
+
   .top-btn a {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -50,16 +53,20 @@ page-home {
   .top-btn a:hover, .top-btn a:active, .top-btn a:focus {
     @include top-btn-focus;
   }
+
   .top-btn-actived {
     @include top-btn-focus;
   }
+
   .top-btn .icon {
     font-size: 5.5rem;
   }
+
   .top-btn h3, .top-btn .icon {
     margin: 0.3rem;
     color: #fff;
   }
+
   .main-show {
     width: 90%;
     margin: auto;
@@ -71,6 +78,7 @@ page-home {
         -webkit-transform: translate(-50%, -50%);*/
     /*    background-color: #1e87ea;*/
   }
+
   .main-show video {
     margin: 0;
     padding: 0;
@@ -84,6 +92,7 @@ page-home {
     box-shadow: 0 0 0 10px #fff,
     0 3px 5px 10px rgba(0, 0, 0, .6);
   }
+
   .main-show a {
     display: block;
     margin: 2.5rem 1rem;
@@ -93,6 +102,7 @@ page-home {
     -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
   }
+
   .main-show a:hover, .main-show a:active, .main-show a:focus {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
@@ -113,11 +123,22 @@ page-home {
     margin: 0;
     color: #fff;
   }
+
   .main-show.sanwu a {
     margin: 2.5rem;
     padding: 8rem 2rem;
   }
+
   .main-show.sanwu .icon {
+    margin-bottom: 1.2rem !important;
+    font-size: 10rem;
+  }
+
+  .main-show.damei .juxian {
+    padding: 8rem 1rem;
+  }
+
+  .main-show.damei .juxian .icon {
     margin-bottom: 1.2rem !important;
     font-size: 10rem;
   }

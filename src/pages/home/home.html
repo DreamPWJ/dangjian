@@ -71,12 +71,12 @@
       </video>
       <ion-col col-2>
         <a tabindex="9" class="calm-bg" (click)="liveStreaming(0)">
-          <ion-icon class="icon-homefill"></ion-icon>
-          <h3 text-nowrap>主页视频</h3>
+          <ion-icon class="icon-recordfill"></ion-icon>
+          <h3 text-nowrap>宣传视频</h3>
         </a>
         <a tabindex="10" class="balanced-bg" (click)="liveStreaming(1)">
-          <ion-icon name="logo-youtube"></ion-icon>
-          <h3 text-nowrap>视频录播</h3>
+          <ion-icon class="icon-videofill"></ion-icon>
+          <h3 text-nowrap>直播视频</h3>
         </a>
       </ion-col>
     </ion-row>
@@ -113,7 +113,6 @@
           <h3>工作督查通报</h3>
         </a>
 
-
       </ion-col>
     </ion-row>
 
@@ -139,6 +138,90 @@
       </ion-col>
     </ion-row>
 
+    <ion-row *ngIf="typeFlag==3" class="main-show dangyuan" justify-content-around align-items-center text-center>
+      <ion-col col-2>
+        <a tabindex="7" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=106" class="positive-bg">
+          <ion-icon class="icon-meijingzhuizong"></ion-icon>
+          <h3>大美莒县</h3>
+        </a>
+      </ion-col>
+
+      <ion-col col-2>
+        <a tabindex="8" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=121" class="balanced-bg">
+          <ion-icon class="icon-1"></ion-icon>
+          <h3>特色农业</h3>
+        </a>
+        <a tabindex="9" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=142" class="assertive-bg">
+          <ion-icon class="icon-camerafill"></ion-icon>
+          <h3>随手拍 曝光台</h3>
+        </a>
+      </ion-col>
+
+      <ion-col col-2>
+        <a tabindex="10" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=122" class="positive-bg">
+          <ion-icon class="icon-qi"></ion-icon>
+          <h3>龙头企业</h3>
+        </a>
+        <a tabindex="11" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=124" class="balanced-bg">
+          <ion-icon class="icon-meijingzhuizong"></ion-icon>
+          <h3>乡村美景</h3>
+        </a>
+      </ion-col>
+
+      <ion-col col-2>
+        <a tabindex="13" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=123" class="energized-bg">
+          <ion-icon class="icon-global"></ion-icon>
+          <h3>莒县播报</h3>
+        </a>
+        <a tabindex="14" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=141" class="royal-bg">
+          <ion-icon class="icon-newsfill"></ion-icon>
+          <h3>信息之窗</h3>
+        </a>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="typeFlag==5" class="main-show damei" justify-content-around align-items-center text-center>
+      <ion-col col-2>
+        <a tabindex="7" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=106" class="calm-bg juxian">
+          <!--    <img  src="assets/img/main/juxian.png"/>-->
+          <ion-icon class="icon-meijingzhuizong"></ion-icon>
+          <h3>大美莒县</h3>
+        </a>
+      </ion-col>
+
+      <ion-col col-2>
+        <a tabindex="8" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=121" class="balanced-bg">
+          <ion-icon class="icon-1"></ion-icon>
+          <h3>特色农产</h3>
+        </a>
+        <a tabindex="9" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=142" class="assertive-bg">
+          <ion-icon class="icon-camerafill"></ion-icon>
+          <h3>随手拍 曝光台</h3>
+        </a>
+      </ion-col>
+
+      <ion-col col-2>
+        <a tabindex="10" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=122" class="positive-bg">
+          <ion-icon class="icon-qi"></ion-icon>
+          <h3>龙头企业</h3>
+        </a>
+        <a tabindex="11" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=124" class="balanced-bg">
+          <ion-icon class="icon-meijingzhuizong"></ion-icon>
+          <h3>乡村美景</h3>
+        </a>
+      </ion-col>
+
+      <ion-col col-2>
+        <a tabindex="13" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=123" class="energized-bg">
+          <ion-icon class="icon-global"></ion-icon>
+          <h3>莒县播报</h3>
+        </a>
+        <a tabindex="14" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=141" class="royal-bg">
+          <ion-icon class="icon-newsfill"></ion-icon>
+          <h3>信息之窗</h3>
+        </a>
+      </ion-col>
+    </ion-row>
     <ion-row *ngIf="typeFlag==6" class="main-show hongse" justify-content-center align-items-center text-center>
       <video col-6 controls="controls" autoplay="autoplay" src="{{videoUrl}}">
       </video>
