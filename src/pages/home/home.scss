@@ -11,7 +11,7 @@ page-home {
   @each $animal in $animal-list {
     .main-#{$animal} {
       @include main;
-      background-image: url('../assets/img/main/#{$animal}.png');
+      background-image: url('../assets/img/main/#{$animal}.jpeg');
     }
   }
 
