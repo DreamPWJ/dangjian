@@ -12,12 +12,12 @@
       </ion-col>
     </ion-row>
     <ion-row class="top-btn" justify-content-around text-center>
-<!--      <ion-col>
-        <a tabindex="1" (click)="liveStreaming(0)" class="{{typeFlag==0?'top-btn-actived':''}}">
-          <ion-icon class="icon-homefill"></ion-icon>
-          <h3 text-nowrap>党建首页</h3>
-        </a>
-      </ion-col>-->
+      <!--      <ion-col>
+              <a tabindex="1" (click)="liveStreaming(0)" class="{{typeFlag==0?'top-btn-actived':''}}">
+                <ion-icon class="icon-homefill"></ion-icon>
+                <h3 text-nowrap>党建首页</h3>
+              </a>
+            </ion-col>-->
       <ion-col>
         <a tabindex="1" (click)="typeSwitch(1)" class="{{typeFlag==1?'top-btn-actived':''}}">
           <ion-icon class="icon-dangjian"></ion-icon>
@@ -55,31 +55,31 @@
         </a>
       </ion-col>
     </ion-row>
-<!--    <ion-row *ngIf="typeFlag==0" class="main-show" justify-content-around align-items-center text-center>
-      <ion-col col-2>
-        <a tabindex="7" class="energized-bg" (click)="liveStreaming(1)">
-          <ion-icon name="videocam"></ion-icon>
-          <h3 text-nowrap>视频直播</h3>
-        </a>
-        <a tabindex="8" class="royal-bg" (click)="liveStreaming(1)">
-          <ion-icon name="logo-youtube"></ion-icon>
-          <h3 text-nowrap>视频录播</h3>
-        </a>
-      </ion-col>
+    <!--    <ion-row *ngIf="typeFlag==0" class="main-show" justify-content-around align-items-center text-center>
+          <ion-col col-2>
+            <a tabindex="7" class="energized-bg" (click)="liveStreaming(1)">
+              <ion-icon name="videocam"></ion-icon>
+              <h3 text-nowrap>视频直播</h3>
+            </a>
+            <a tabindex="8" class="royal-bg" (click)="liveStreaming(1)">
+              <ion-icon name="logo-youtube"></ion-icon>
+              <h3 text-nowrap>视频录播</h3>
+            </a>
+          </ion-col>
 
-      <video col-6 controls="controls" autoplay="autoplay" src="{{videoUrl}}">
-      </video>
-      <ion-col col-2>
-        <a tabindex="9" class="calm-bg" (click)="liveStreaming(0)">
-          <ion-icon class="icon-recordfill"></ion-icon>
-          <h3 text-nowrap>宣传视频</h3>
-        </a>
-        <a tabindex="10" class="balanced-bg" (click)="liveStreaming(1)">
-          <ion-icon class="icon-videofill"></ion-icon>
-          <h3 text-nowrap>直播视频</h3>
-        </a>
-      </ion-col>
-    </ion-row>-->
+          <video col-6 controls="controls" autoplay="autoplay" src="{{videoUrl}}">
+          </video>
+          <ion-col col-2>
+            <a tabindex="9" class="calm-bg" (click)="liveStreaming(0)">
+              <ion-icon class="icon-recordfill"></ion-icon>
+              <h3 text-nowrap>宣传视频</h3>
+            </a>
+            <a tabindex="10" class="balanced-bg" (click)="liveStreaming(1)">
+              <ion-icon class="icon-videofill"></ion-icon>
+              <h3 text-nowrap>直播视频</h3>
+            </a>
+          </ion-col>
+        </ion-row>-->
     <ion-row *ngIf="typeFlag==1" class="main-show dangjian" justify-content-around align-items-center text-center>
       <ion-col col-2>
         <a tabindex="7" (click)="liveStreaming(1)" class="energized-bg">
@@ -243,10 +243,45 @@
       </ion-col>
     </ion-row>
     <ion-row *ngIf="typeFlag==6" class="main-show hongse" justify-content-center align-items-center text-center>
-      <video col-6 controls="controls" autoplay="autoplay" src="{{videoUrl}}">
-      </video>
+      <ion-col col-3>
+        <a href="" class="energized-bg">
+          <ion-icon class="icon-yingyuan first"></ion-icon>
+          <h3 text-nowrap>红色电影</h3>
+        </a>
+      </ion-col>
+      <ion-col col-2>
+        <a href="" class="energized-bg">
+          <ion-icon class="icon-yingyuan"></ion-icon>
+          <h3 text-nowrap>红色电影</h3>
+        </a>
+        <a href="" class="energized-bg">
+          <ion-icon class="icon-yingyuan"></ion-icon>
+          <h3 text-nowrap>红色电影</h3>
+        </a>
+      </ion-col>
+      <ion-col col-2>
+        <a href="" class="energized-bg">
+          <ion-icon class="icon-yingyuan"></ion-icon>
+          <h3 text-nowrap>红色电影</h3>
+        </a>
+        <a href="" class="energized-bg">
+          <ion-icon class="icon-yingyuan"></ion-icon>
+          <h3 text-nowrap>红色电影</h3>
+        </a>
+      </ion-col>
+      <ion-col col-2>
+        <a href="" class="energized-bg">
+          <ion-icon class="icon-yingyuan"></ion-icon>
+          <h3 text-nowrap>红色电影</h3>
+        </a>
+        <a href="" class="energized-bg">
+          <ion-icon class="icon-yingyuan"></ion-icon>
+          <h3 text-nowrap>红色电影</h3>
+        </a>
+      </ion-col>
 
     </ion-row>
+
   </ion-grid>
 
 </ion-content>
