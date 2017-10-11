@@ -11,6 +11,9 @@ import {TabsPage} from '../pages/tabs/tabs';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 
+import { HttpModule } from '@angular/http';
+import {AppGlobal,AppService} from './app.service';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -20,7 +23,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
     TabsPage
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,HttpModule,
     IonicModule.forRoot(MyApp, {
       tabsHideOnSubPages: 'true',//隐藏全部子页面tabs
       backButtonText: '',
@@ -41,6 +44,8 @@ import {SplashScreen} from '@ionic-native/splash-screen';
     TabsPage
   ],
   providers: [
+    AppGlobal,
+    AppService,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

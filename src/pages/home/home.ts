@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
+import {AppService} from "../../app/app.service";
 
 @Component({
   selector: 'page-home',
@@ -10,7 +11,7 @@ export class HomePage {
   public videoUrl: string = "http://jxdj1.rzzyfw.com/upload/dy/yyzls/1.mp4";
   public typeFlag: number = 0;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,public appService:AppService) {
 
   }
 
