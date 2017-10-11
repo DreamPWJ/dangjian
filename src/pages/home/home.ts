@@ -1,29 +1,29 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {AppService} from "../../app/app.service";
+import {AppGlobal, AppService} from "../../app/app.service";
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  public domain: string = "http://jxdj.rzzyfw.com"
+  public domain: string = AppGlobal.domain
   public videoUrl: string = "http://jxdj1.rzzyfw.com/upload/dy/yyzls/1.mp4";
   public typeFlag: number = 0;
 
-  constructor(public navCtrl: NavController,public appService:AppService) {
+  constructor(public navCtrl: NavController, public appService: AppService) {
 
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
-    this.typeFlag=Number(localStorage.getItem("topTypeFlag"))||0;
+    this.typeFlag = Number(localStorage.getItem("topTypeFlag")) || 0;
   }
 
   //类型切换
   typeSwitch(type) {
     event.preventDefault();
-    localStorage.setItem("topTypeFlag",type);
+    localStorage.setItem("topTypeFlag", type);
     if (type == 1) {  //智慧党建
       this.typeFlag = 1
     } else if (type == 2) { //三务公开
@@ -46,7 +46,7 @@ export class HomePage {
     event.preventDefault();
     if (type == 0) {  //主页
       this.typeFlag = 0;
-      localStorage.setItem("topTypeFlag",'0');
+      localStorage.setItem("topTypeFlag", '0');
       this.videoUrl = "http://jxdj1.rzzyfw.com/upload/dy/yyzls/1.mp4"
     } else if (type == 1) { //直播
       this.videoUrl = "http://u166.auto.s.wanglitiaoyi.com/live/3693838317.m3u8"
