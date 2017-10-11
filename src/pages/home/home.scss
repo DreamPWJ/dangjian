@@ -27,7 +27,7 @@ page-home {
   }
 
   .top-btn {
-    width: 96%;
+    width: 90%;
     margin: 0.5rem auto;
   }
 
@@ -124,6 +124,11 @@ page-home {
     color: #fff;
   }
 
+  .main-show.dangjian a {
+    margin:1.6rem 1rem;
+    padding:1.2rem;
+  }
+
   .main-show.sanwu a {
     margin: 2.5rem;
     padding: 8rem 2rem;
@@ -134,11 +139,11 @@ page-home {
     font-size: 10rem;
   }
 
-  .main-show.damei .juxian ,.main-show.dangyuan .fengcai,.main-show.fupin .zhengce{
+  .main-show.damei .juxian, .main-show.dangyuan .fengcai, .main-show.fupin .zhengce {
     padding: 8rem 1rem;
   }
 
-  .main-show.damei .juxian .icon ,.main-show.dangyuan .fengcai .icon,.main-show.fupin .zhengce .icon{
+  .main-show.damei .juxian .icon, .main-show.dangyuan .fengcai .icon, .main-show.fupin .zhengce .icon {
     margin-bottom: 1.2rem !important;
     font-size: 10rem;
   }

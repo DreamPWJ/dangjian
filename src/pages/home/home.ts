@@ -8,8 +8,8 @@ import {AppGlobal, AppService} from "../../app/app.service";
 })
 export class HomePage {
   public domain: string = AppGlobal.domain
-  public videoUrl: string = "http://jxdj1.rzzyfw.com/upload/dy/yyzls/1.mp4";
-  public typeFlag: number = 0;
+  public videoUrl: string = this.domain+"/upload/dy/yyzls/1.mp4";
+  public typeFlag: number = 1;
 
   constructor(public navCtrl: NavController, public appService: AppService) {
 
@@ -17,7 +17,7 @@ export class HomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
-    this.typeFlag = Number(localStorage.getItem("topTypeFlag")) || 0;
+    this.typeFlag = Number(localStorage.getItem("topTypeFlag")) || 1;
   }
 
   //类型切换
@@ -36,8 +36,6 @@ export class HomePage {
       this.typeFlag = 5
     } else if (type == 6) { //红色影院
       this.typeFlag = 6
-    } else {//主页
-      this.typeFlag = 0
     }
   }
 
@@ -45,9 +43,9 @@ export class HomePage {
   liveStreaming(type) {
     event.preventDefault();
     if (type == 0) {  //主页
-      this.typeFlag = 0;
-      localStorage.setItem("topTypeFlag", '0');
-      this.videoUrl = "http://jxdj1.rzzyfw.com/upload/dy/yyzls/1.mp4"
+/*      this.typeFlag = 0;
+      localStorage.setItem("topTypeFlag", '0');*/
+      this.videoUrl = this.domain+"/upload/dy/yyzls/1.mp4"
     } else if (type == 1) { //直播
       this.videoUrl = "http://u166.auto.s.wanglitiaoyi.com/live/3693838317.m3u8"
     }

@@ -12,12 +12,12 @@
       </ion-col>
     </ion-row>
     <ion-row class="top-btn" justify-content-around text-center>
-      <ion-col>
+<!--      <ion-col>
         <a tabindex="1" (click)="liveStreaming(0)" class="{{typeFlag==0?'top-btn-actived':''}}">
           <ion-icon class="icon-homefill"></ion-icon>
           <h3 text-nowrap>党建首页</h3>
         </a>
-      </ion-col>
+      </ion-col>-->
       <ion-col>
         <a tabindex="1" (click)="typeSwitch(1)" class="{{typeFlag==1?'top-btn-actived':''}}">
           <ion-icon class="icon-dangjian"></ion-icon>
@@ -55,7 +55,7 @@
         </a>
       </ion-col>
     </ion-row>
-    <ion-row *ngIf="typeFlag==0" class="main-show" justify-content-around align-items-center text-center>
+<!--    <ion-row *ngIf="typeFlag==0" class="main-show" justify-content-around align-items-center text-center>
       <ion-col col-2>
         <a tabindex="7" class="energized-bg" (click)="liveStreaming(1)">
           <ion-icon name="videocam"></ion-icon>
@@ -79,31 +79,29 @@
           <h3 text-nowrap>直播视频</h3>
         </a>
       </ion-col>
-    </ion-row>
+    </ion-row>-->
     <ion-row *ngIf="typeFlag==1" class="main-show dangjian" justify-content-around align-items-center text-center>
-      <ion-col col-3>
-        <a tabindex="7" href="{{domain}}/weixin2/dianshi/qiaoshan/ht/selectxiehui.aspx" class="energized-bg">
+      <ion-col col-2>
+        <a tabindex="7" (click)="liveStreaming(1)" class="energized-bg">
           <ion-icon class="icon-recordfill"></ion-icon>
           <h3 text-nowrap>会议直播</h3>
         </a>
-        <a tabindex="8" href="{{domain}}/weixin2/dianshi/qiaoshan/ht/selectxiehui.aspx" class="royal-bg">
+        <a tabindex="8" (click)="liveStreaming(1)" class="royal-bg">
           <ion-icon class="icon-jiankong"></ion-icon>
           <h3 text-nowrap>视频监控</h3>
         </a>
-      </ion-col>
-
-      <ion-col col-3>
-        <a tabindex="9" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=107" class="calm-bg">
-          <ion-icon class="icon-read"></ion-icon>
-          <h3 text-nowrap>学习教育</h3>
-        </a>
-        <a tabindex="10" href="https://www.dtdjzx.gov.cn/" class="balanced-bg">
+        <a tabindex="9" href="https://www.dtdjzx.gov.cn/" class="balanced-bg">
           <ion-icon class="icon-dengtalighthouse1"></ion-icon>
           <h3 text-nowrap>灯塔在线</h3>
         </a>
       </ion-col>
-
-      <ion-col col-3>
+      <video col-6 controls="controls" autoplay="autoplay" src="{{videoUrl}}">
+      </video>
+      <ion-col col-2>
+        <a tabindex="10" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=107" class="calm-bg">
+          <ion-icon class="icon-read"></ion-icon>
+          <h3 text-nowrap>学习教育</h3>
+        </a>
         <a tabindex="11" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=108" class="positive-bg">
           <ion-icon class="icon-phone"></ion-icon>
           <h3 text-nowrap>联系服务群众</h3>
