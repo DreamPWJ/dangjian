@@ -257,7 +257,7 @@
     <ion-row *ngIf="typeFlag==6" class="main-show hongse" align-items-center text-center>
 
       <ion-col col-2 *ngFor="let item of redFilms">
-        <img  (click)="pushFilmPage(item.id)" width="150px" height="190px" [src]="item.images.medium"
+        <img  (click)="pushFilmPage(item.id)" width="140px" height="180px" [src]="item.images.medium"
              alt="{{item.alt}}"/>
         <h4 text-nowrap>{{item.title}}</h4>
       </ion-col>
