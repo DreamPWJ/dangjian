@@ -21,13 +21,13 @@ page-home {
   }
 
   .img-logo {
-    margin: 0.6rem 0;
+    margin: 0.5rem 0;
     width: 42rem;
     height: 7rem;
   }
 
   .top-btn {
-    width: 90%;
+    width: 85%;
     margin: 0.5rem auto;
   }
 
@@ -59,18 +59,18 @@ page-home {
   }
 
   .top-btn .icon {
-    font-size: 5.5rem;
+    font-size: 5rem;
   }
 
-  .top-btn h3, .top-btn .icon {
-    margin: 0.3rem;
+  .top-btn h4, .top-btn .icon {
+    margin: 0.2rem;
     color: #fff;
   }
 
   .main-show {
     width: 90%;
     margin: auto;
-    padding: 2rem 0;
+    padding: 1rem 0;
     /*    position: absolute;
         top: 60%;
         left: 50%;
@@ -167,16 +167,18 @@ page-home {
   }
 
   .film-search ion-searchbar {
-    margin-right: 2rem !important;
+    margin-right: 3rem !important;
   }
 
   .film-search input {
     border-radius: 2rem !important;
-    background-color: rgba(255, 255, 255, 0.3) !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
   }
 
   .film-search button {
-    margin-left: 1rem;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 
 }

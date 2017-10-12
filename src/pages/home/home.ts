@@ -59,7 +59,7 @@ export class HomePage {
   searchFilm(ev: any) {
     // Reset items back to all of the items
     // set val to the value of the searchbar
-    let val = ev.target.value;
+/*    let val = ev.target.value;*/
     // if the value is an empty string don't filter the items
 /*    if (val && val.trim() != '') {
       this.redFilms = this.redFilms.filter((item) => {
