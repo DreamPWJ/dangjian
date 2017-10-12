@@ -19,41 +19,52 @@
               </a>
             </ion-col>-->
       <ion-col>
-        <a tabindex="1" (click)="typeSwitch(1)" class="{{typeFlag==1?'top-btn-actived':''}}">
+        <a tabindex="1" (tap)="typeSwitch(1)" class="{{typeFlag==1?'top-btn-actived':''}}">
           <ion-icon class="icon-dangjian"></ion-icon>
           <h3 text-nowrap>智慧党建</h3>
         </a>
       </ion-col>
       <ion-col>
-        <a tabindex="2" (click)="typeSwitch(2)" class="{{typeFlag==2?'top-btn-actived':''}}">
+        <a tabindex="2" (tap)="typeSwitch(2)" class="{{typeFlag==2?'top-btn-actived':''}}">
           <ion-icon name="mail-open"></ion-icon>
           <h3 text-nowrap>三务公开</h3>
         </a>
       </ion-col>
       <ion-col>
-        <a tabindex="3" (click)="typeSwitch(3)" class="{{typeFlag==3?'top-btn-actived':''}}">
+        <a tabindex="3" (tap)="typeSwitch(3)" class="{{typeFlag==3?'top-btn-actived':''}}">
           <ion-icon class="icon-friendfill"></ion-icon>
           <h3 text-nowrap>党员之家</h3>
         </a>
       </ion-col>
       <ion-col>
-        <a tabindex="4" (click)="typeSwitch(4)" class="{{typeFlag==4?'top-btn-actived':''}}">
+        <a tabindex="4" (tap)="typeSwitch(4)" class="{{typeFlag==4?'top-btn-actived':''}}">
           <ion-icon class="icon-sponsorfill"></ion-icon>
           <h3 text-nowrap>精准扶贫</h3>
         </a>
       </ion-col>
       <ion-col>
-        <a tabindex="5" (click)="typeSwitch(5)" class="{{typeFlag==5?'top-btn-actived':''}}">
+        <a tabindex="5" (tap)="typeSwitch(5)" class="{{typeFlag==5?'top-btn-actived':''}}">
           <ion-icon class="icon-shanshui"></ion-icon>
           <h3 text-nowrap>大美莒县</h3>
         </a>
       </ion-col>
       <ion-col>
-        <a tabindex="6" (click)="typeSwitch(6)" class="{{typeFlag==6?'top-btn-actived':''}}">
+        <a tabindex="6" (tap)="typeSwitch(6)" class="{{typeFlag==6?'top-btn-actived':''}}">
           <ion-icon class="icon-yingyuan"></ion-icon>
           <h3 text-nowrap>红色影院</h3>
         </a>
       </ion-col>
+    </ion-row>
+    <ion-row *ngIf="typeFlag==6" class="film-search" justify-content-center  text-center margin-top>
+      <ion-searchbar   no-padding col-2  placeholder="搜索您要的电影"
+                     (ionInput)="searchFilm($event)"></ion-searchbar>
+      <button  (tap)="typeSwitch(6)" ion-button round>热门电影</button>
+      <button  ion-button round outline>最新推荐</button>
+      <button  ion-button round outline>最新上线</button>
+      <button  ion-button round outline>最受好评</button>
+      <button  ion-button round outline>特色策划</button>
+      <button  ion-button round outline>热血战争</button>
+
     </ion-row>
     <!--    <ion-row *ngIf="typeFlag==0" class="main-show" justify-content-around align-items-center text-center>
           <ion-col col-2>
@@ -243,9 +254,11 @@
       </ion-col>
     </ion-row>
 
-    <ion-row *ngIf="typeFlag==6" class="main-show hongse"  align-items-center text-center>
-      <ion-col col-2 *ngFor="let item of redFilms" >
-        <img (click)="pushFilmPage(item.id)" width="150px" height="210px" [src]="item.images.medium" alt="{{item.alt}}"/>
+    <ion-row *ngIf="typeFlag==6" class="main-show hongse" align-items-center text-center>
+
+      <ion-col col-2 *ngFor="let item of redFilms">
+        <img (click)="pushFilmPage(item.id)" width="150px" height="210px" [src]="item.images.medium"
+             alt="{{item.alt}}"/>
         <h4 text-nowrap>{{item.title}}</h4>
       </ion-col>
     </ion-row>
