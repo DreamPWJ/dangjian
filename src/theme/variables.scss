@@ -12,14 +12,7 @@ $app-direction: ltr;
 
 @import "ionic.globals";
 
-// Shared Variables
-// --------------------------------------------------
-// To customize the look and feel of this app, you can override
-// the Sass variables found in Ionic's source scss files.
-// To view all the possible Ionic variables, see:
-// http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
-$img-placeholder-background: transparent;
 
 // Named Color Variables
 // --------------------------------------------------
@@ -37,10 +30,23 @@ $colors: (
   dark: #222
 );
 
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+$img-placeholder-background: transparent !default;
+$toolbar-background: color($colors, primary) !default;
+$tabs-background: #fff !default;
+$list-border-color: #EBEBEB !default;
+
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
+$toolbar-ios-border-color: transparent!default;
+$tabs-ios-border-color: #EBEBEB !default;
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here

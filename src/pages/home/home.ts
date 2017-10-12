@@ -56,4 +56,10 @@ export class HomePage {
     }
   }
 
+  pushFilmPage(id){
+
+    this.navCtrl.push('FilmPage', {
+      id: id,
+    });
+  }
 }
