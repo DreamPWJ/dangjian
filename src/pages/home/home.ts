@@ -8,8 +8,9 @@ import {AppGlobal, AppService} from "../../app/app.service";
 })
 export class HomePage {
   public domain: string = AppGlobal.domain
-  public videoUrl: string = this.domain+"/upload/dy/yyzls/1.mp4";
+  public videoUrl: string = this.domain + "/upload/dy/yyzls/1.mp4";
   public typeFlag: number = 1;
+  public redFilms: any[];
 
   constructor(public navCtrl: NavController, public appService: AppService) {
 
@@ -36,6 +37,10 @@ export class HomePage {
       this.typeFlag = 5
     } else if (type == 6) { //红色影院
       this.typeFlag = 6
+      this.appService.httpGet("https://api.douban.com/v2/movie/search", {tag: "抗战",count:13},  (data) =>{
+        console.log(data);
+        this.redFilms=data.subjects;
+      })
     }
   }
 
@@ -43,9 +48,9 @@ export class HomePage {
   liveStreaming(type) {
     event.preventDefault();
     if (type == 0) {  //主页
-/*      this.typeFlag = 0;
-      localStorage.setItem("topTypeFlag", '0');*/
-      this.videoUrl = this.domain+"/upload/dy/yyzls/1.mp4"
+      /*      this.typeFlag = 0;
+            localStorage.setItem("topTypeFlag", '0');*/
+      this.videoUrl = this.domain + "/upload/dy/yyzls/1.mp4"
     } else if (type == 1) { //直播
       this.videoUrl = "http://u166.auto.s.wanglitiaoyi.com/live/3693838317.m3u8"
     }

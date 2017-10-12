@@ -242,44 +242,12 @@
         </a>
       </ion-col>
     </ion-row>
-    <ion-row *ngIf="typeFlag==6" class="main-show hongse" justify-content-center align-items-center text-center>
-      <ion-col col-3>
-        <a href="" class="energized-bg">
-          <ion-icon class="icon-yingyuan first"></ion-icon>
-          <h3 text-nowrap>红色电影</h3>
-        </a>
-      </ion-col>
-      <ion-col col-2>
-        <a href="" class="energized-bg">
-          <ion-icon class="icon-yingyuan"></ion-icon>
-          <h3 text-nowrap>红色电影</h3>
-        </a>
-        <a href="" class="energized-bg">
-          <ion-icon class="icon-yingyuan"></ion-icon>
-          <h3 text-nowrap>红色电影</h3>
-        </a>
-      </ion-col>
-      <ion-col col-2>
-        <a href="" class="energized-bg">
-          <ion-icon class="icon-yingyuan"></ion-icon>
-          <h3 text-nowrap>红色电影</h3>
-        </a>
-        <a href="" class="energized-bg">
-          <ion-icon class="icon-yingyuan"></ion-icon>
-          <h3 text-nowrap>红色电影</h3>
-        </a>
-      </ion-col>
-      <ion-col col-2>
-        <a href="" class="energized-bg">
-          <ion-icon class="icon-yingyuan"></ion-icon>
-          <h3 text-nowrap>红色电影</h3>
-        </a>
-        <a href="" class="energized-bg">
-          <ion-icon class="icon-yingyuan"></ion-icon>
-          <h3 text-nowrap>红色电影</h3>
-        </a>
-      </ion-col>
 
+    <ion-row *ngIf="typeFlag==6" class="main-show hongse"  align-items-center text-center>
+      <ion-col col-2 *ngFor="let item of redFilms" >
+        <img width="150px" [src]="item.images.medium" alt="{{item.alt}}"/>
+        <h4 text-nowrap>{{item.title}}</h4>
+      </ion-col>
     </ion-row>
 
   </ion-grid>

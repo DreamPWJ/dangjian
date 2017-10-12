@@ -139,7 +139,7 @@ page-home {
     font-size: 10rem;
   }
 
-  .main-show.damei .juxian, .main-show.dangyuan .fengcai, .main-show.fupin .zhengce,.main-show.hongse .first {
+  .main-show.damei .juxian, .main-show.dangyuan .fengcai, .main-show.fupin .zhengce {
     padding: 8rem 1rem;
   }
 
@@ -148,4 +148,21 @@ page-home {
     font-size: 10rem;
   }
 
+  .main-show.hongse img{
+    border-radius: 0.6rem;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+  }
+
+  .main-show.hongse img:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border: 3px solid #fff;
+  }
+
+  .main-show.hongse h4{
+    margin-top: 0.5rem;
+    color: #fff;
+  }
 }
