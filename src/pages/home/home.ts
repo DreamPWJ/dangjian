@@ -26,7 +26,6 @@ export class HomePage {
 
   //类型切换
   typeSwitch(type) {
-    event.preventDefault();
     localStorage.setItem("topTypeFlag", type);
     if (type == 1) {  //智慧党建
       this.typeFlag = 1
@@ -49,12 +48,11 @@ export class HomePage {
     this.appService.httpGet("https://api.douban.com/v2/movie/search", {tag: "抗战", count: 13}, (data) => {
       console.log(data);
       this.redFilms = data.subjects;
-    })
+    },true)
   }
 
   //视频切换
   liveStreaming(type) {
-    event.preventDefault();
     if (type == 0) {  //主页
       /*      this.typeFlag = 0;
             localStorage.setItem("topTypeFlag", '0');*/
