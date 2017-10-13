@@ -15,7 +15,7 @@ import {AppGlobal} from "../../app/app.service";
   templateUrl: 'livebroadcast.html',
 })
 export class LivebroadcastPage {
-  public videoUrl: string =AppGlobal.domain + "/upload/dy/yyzls/1.mp4"  //"http://u166.auto.s.wanglitiaoyi.com/live/3693838317.m3u8";
+  public videoUrl: string ="http://u166.auto.s.wanglitiaoyi.com/live/3693838317.m3u8"  //AppGlobal.domain + "/upload/dy/yyzls/1.mp4";
   public livebroadcast: any = {};
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
