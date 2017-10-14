@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
-import {AppGlobal} from "../../app/app.service";
 
 /**
  * Generated class for the LivebroadcastPage page.
