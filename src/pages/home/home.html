@@ -257,12 +257,11 @@
     </ion-row>
 
     <ion-row *ngIf="typeFlag==6" class="main-show-hongse hongse" justify-content-center text-center>
-
-      <ion-col tabindex="7" col-2 *ngFor="let item of redFilms">
+      <a tabindex="{{index}}" col-2 *ngFor="let item of redFilms">
         <img (click)="pushFilmPage(item.id)" width="140px" height="180px" [src]="item.images.medium"
              alt="{{item.alt}}"/>
         <h4 text-nowrap>{{item.title}}</h4>
-      </ion-col>
+      </a>
     </ion-row>
 
   </ion-grid>

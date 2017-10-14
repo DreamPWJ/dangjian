@@ -11,7 +11,7 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 
 import { HttpModule } from '@angular/http';
-import {AppGlobal,AppService} from './app.service';
+import {AppService} from './app.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,6 @@ import {AppGlobal,AppService} from './app.service';
     TabsPage
   ],
   providers: [
-    AppGlobal,
     AppService,
     StatusBar,
     SplashScreen,
