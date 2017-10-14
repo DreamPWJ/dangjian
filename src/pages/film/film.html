@@ -4,17 +4,20 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header no-border>
+<ion-header >
 
   <ion-navbar>
-    <ion-title>{{filmsInfo.title}}</ion-title>
+    <ion-title>红色电影</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <ion-row class="main-show" justify-content-around align-items-center text-center>
-<!--    <img [src]="filmsInfo.images.large" alt="{{filmsInfo.alt}}"/>-->
+<ion-content >
+  <ion-row class="main-show full-screen" nowrap  justify-content-center align-items-center
+           text-center>
+    <video controls="controls" autoplay="autoplay" src="{{videoUrl}}">
+    </video>
+
   </ion-row>
 </ion-content>
