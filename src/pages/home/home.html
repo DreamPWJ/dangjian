@@ -102,7 +102,7 @@
           <ion-icon class="icon-jiankong"></ion-icon>
           <h3 text-nowrap>视频监控</h3>
         </a>
-        <a tabindex="9" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=108" class="positive-bg">
+        <a tabindex="9" [navPush]="'NewsPage'" [navParams]="{id:108,title:'联系服务群众'}" class="positive-bg">
           <ion-icon class="icon-phone"></ion-icon>
           <h3 text-nowrap>联系服务群众</h3>
         </a>
