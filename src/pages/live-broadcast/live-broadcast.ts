@@ -11,19 +11,19 @@ import {AppGlobal} from "../../app/app.service";
 
 @IonicPage()
 @Component({
-  selector: 'page-livebroadcast',
-  templateUrl: 'livebroadcast.html',
+  selector: 'page-live-broadcast',
+  templateUrl: 'live-broadcast.html',
 })
-export class LivebroadcastPage {
+export class LiveBroadcastPage {
   public videoUrl: string ="http://u166.auto.s.wanglitiaoyi.com/live/3693838317.m3u8"  //AppGlobal.domain + "/upload/dy/yyzls/1.mp4";
-  public livebroadcast: any = {};
+  public liveBroadcast: any = {};
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.livebroadcast = navParams.data;
+    this.liveBroadcast = navParams.data;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LivebroadcastPage');
+    console.log('ionViewDidLoad LiveBroadcastPage');
   }
 
 }

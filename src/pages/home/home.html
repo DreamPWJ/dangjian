@@ -8,7 +8,7 @@
   <ion-grid class="grid">
     <ion-row>
       <ion-col text-center>
-        <img class="img-logo" src="assets/img/main/logoll.png"/>
+        <img class="img-logo" src="assets/img/main/logo-top.png"/>
       </ion-col>
     </ion-row>
     <ion-row class="top-btn" nowrap justify-content-center text-center>
@@ -94,11 +94,11 @@
     <ion-row *ngIf="typeFlag==1" class="main-show dangjian" nowrap justify-content-around align-items-center
              text-center>
       <ion-col col-2>
-        <a tabindex="7" [navPush]="'LivebroadcastPage'" [navParams]="{type:1,title:'会议直播'}"  class="energized-bg">
+        <a tabindex="7" [navPush]="'LiveBroadcastPage'" [navParams]="{type:1,title:'会议直播'}"  class="energized-bg">
           <ion-icon class="icon-recordfill"></ion-icon>
           <h3 text-nowrap>会议直播</h3>
         </a>
-        <a tabindex="8" [navPush]="'LivebroadcastPage'" [navParams]="{type:2,title:'视频监控'}"class="royal-bg">
+        <a tabindex="8" [navPush]="'LiveBroadcastPage'" [navParams]="{type:2,title:'视频监控'}"class="royal-bg">
           <ion-icon class="icon-jiankong"></ion-icon>
           <h3 text-nowrap>视频监控</h3>
         </a>

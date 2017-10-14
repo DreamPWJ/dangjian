@@ -6,7 +6,7 @@
 -->
 <ion-header no-border>
   <ion-navbar>
-    <ion-title>{{livebroadcast.title}}</ion-title>
+    <ion-title>{{liveBroadcast.title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -15,12 +15,12 @@
            text-center>
     <ion-col col-2 class="buttons" >
       <button ion-button block large round>
-        <ion-icon margin-right class="{{livebroadcast.type==1?'icon-recordfill':'icon-jiankong'}}"></ion-icon>
-        {{livebroadcast.title}}室外
+        <ion-icon margin-right class="{{liveBroadcast.type==1?'icon-recordfill':'icon-jiankong'}}"></ion-icon>
+        {{liveBroadcast.title}}室外
       </button>
       <button color="light" margin-top ion-button block large round >
-        <ion-icon margin-right class="{{livebroadcast.type==1?'icon-recordfill':'icon-jiankong'}}"></ion-icon>
-        {{livebroadcast.title}}室内
+        <ion-icon margin-right class="{{liveBroadcast.type==1?'icon-recordfill':'icon-jiankong'}}"></ion-icon>
+        {{liveBroadcast.title}}室内
       </button>
     </ion-col>
     <video controls="controls" autoplay="autoplay" src="{{videoUrl}}">
