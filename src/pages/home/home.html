@@ -56,14 +56,14 @@
       </ion-col>
     </ion-row>
     <ion-row *ngIf="typeFlag==6" class="film-search" justify-content-center text-center margin-top>
-      <ion-searchbar no-padding col-2 placeholder="搜索电影"
+      <ion-searchbar tabindex="6" no-padding col-2 placeholder="搜索电影"
                      (ionInput)="searchFilm($event)"></ion-searchbar>
-      <button ion-button round>热门电影</button>
-      <button ion-button round outline>最新推荐</button>
-      <button ion-button round outline>最新上线</button>
-      <button ion-button round outline>最受好评</button>
-      <button ion-button round outline>特色策划</button>
-      <button ion-button round outline>热血战争</button>
+      <a tabindex="7" class="film-type" ion-button round>热门电影</a>
+      <a tabindex="8" class="film-type" ion-button round outline>最新推荐</a>
+      <a tabindex="9" class="film-type" ion-button round outline>最新上线</a>
+      <a tabindex="10" class="film-type" ion-button round outline>最受好评</a>
+      <a tabindex="11" class="film-type" ion-button round outline>特色策划</a>
+      <a tabindex="12" class="film-type" ion-button round outline>热血战争</a>
 
     </ion-row>
     <!--    <ion-row *ngIf="typeFlag==0" class="main-show" justify-content-around align-items-center text-center>
@@ -257,7 +257,7 @@
     </ion-row>
 
     <ion-row *ngIf="typeFlag==6" class="main-show-hongse hongse" justify-content-center text-center>
-      <a tabindex="{{index}}" col-2 *ngFor="let item of redFilms">
+      <a tabindex="{{index+12}}" col-2 *ngFor="let item of redFilms">
         <img (click)="pushFilmPage(item.id)" width="140px" height="180px" [src]="item.images.medium"
              alt="{{item.alt}}"/>
         <h4 text-nowrap>{{item.title}}</h4>

@@ -14,14 +14,14 @@
   <ion-row class="main-show full-screen" nowrap align-items-center
            text-center>
     <ion-col col-2 class="buttons" >
-      <button ion-button block large round>
+      <a tabindex="1" ion-button block large round>
         <ion-icon margin-right class="{{liveBroadcast.type==1?'icon-recordfill':'icon-jiankong'}}"></ion-icon>
         {{liveBroadcast.title}}室外
-      </button>
-      <button color="light" margin-top ion-button block large round >
+      </a>
+      <a tabindex="2"  color="light" margin-top ion-button block large round >
         <ion-icon margin-right class="{{liveBroadcast.type==1?'icon-recordfill':'icon-jiankong'}}"></ion-icon>
         {{liveBroadcast.title}}室内
-      </button>
+      </a>
     </ion-col>
     <video controls="controls" autoplay="autoplay" src="{{videoUrl}}">
     </video>
