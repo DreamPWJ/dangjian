@@ -23,7 +23,20 @@ export class HomePage {
     }
   }
 
-  //类型切换
+  ionViewDidEnter() {
+    if (this.typeFlag == 1) {//智慧党建
+      this.playPause(0);
+    }
+  }
+
+  ionViewWillLeave() {
+    this.playPause(1);
+  }
+
+  /**
+   * 类型切换
+   * @param type
+   */
   typeSwitch(type) {
     localStorage.setItem("topTypeFlag", type);
     if (type == 1) {  //智慧党建
@@ -42,7 +55,10 @@ export class HomePage {
     }
   }
 
-  //获取电影数据
+
+  /**
+   * 获取电影数据
+   */
   getFilms() {
     this.appService.httpGet("https://api.douban.com/v2/movie/search", {tag: "抗战", count: 13}, (data) => {
       console.log(data);
@@ -50,7 +66,11 @@ export class HomePage {
     }, true)
   }
 
-  //视频切换
+
+  /**
+   * 视频切换
+   * @param type
+   */
   liveStreaming(type) {
     if (type == 0) {  //主页
       this.videoUrl = this.domain + "/upload/dy/yyzls/1.mp4"
@@ -59,6 +79,10 @@ export class HomePage {
     }
   }
 
+  /**
+   * 搜索电影
+   * @param ev
+   */
   searchFilm(ev: any) {
     // Reset items back to all of the items
     // set val to the value of the searchbar
@@ -71,9 +95,28 @@ export class HomePage {
         }*/
   }
 
+  /**
+   * 导航电影页面
+   * @param id
+   */
   pushFilmPage(id) {
     this.navCtrl.push('FilmPage', {
       id: id,
     });
+  }
+
+  /**
+   * 控制视频播放和暂停
+   * @param type
+   */
+  playPause(type) {
+   /* let myVideo = document.querySelector('#home-video');*/
+    let myVideo = document.getElementsByTagName('video')[0];
+    if (type == 0) {
+      myVideo.play();
+    }
+    else if (type == 1) {
+      myVideo.pause();
+    }
   }
 }
