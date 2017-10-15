@@ -125,6 +125,21 @@ page-home {
     color: #fff;
   }
 
+/*  @media screen and (min-width: 320px) and (max-width: 480px) { //手机设备
+    .main-show{
+      width: 100%;
+      padding: 0.1rem;
+    }
+    .main-show .icon {
+      font-size: 3rem;
+    }
+    .main-show h3, .main-show .icon {
+     font-size: 1.2rem;
+    }
+
+  }*/
+
+
   .main-show.dangjian a {
     margin: 1.6rem 1rem;
     padding: 1.2rem;
@@ -141,12 +156,12 @@ page-home {
   }
 
   .main-show.damei .juxian, .main-show.dangyuan .fengcai, .main-show.fupin .zhengce {
-    padding: 8.6rem 1rem;
+    padding: 8.5rem 1rem;
   }
 
   .main-show.damei .juxian .icon, .main-show.dangyuan .fengcai .icon, .main-show.fupin .zhengce .icon {
     margin-bottom: 1.2rem !important;
-    font-size: 10rem;
+    font-size: 11rem;
   }
 
   .main-show-hongse {
@@ -162,7 +177,7 @@ page-home {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
   }
 
-  .main-show-hongse.hongse img:hover,.main-show-hongse.hongse a:focus img {
+  .main-show-hongse.hongse img:hover, .main-show-hongse.hongse a:focus img {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     border: 3px solid #fff;
