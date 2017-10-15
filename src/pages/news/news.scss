@@ -1,3 +1,15 @@
 page-news {
+  .main-show {
+    background: -webkit-linear-gradient(#00ACFF, #32db64);
+    background: linear-gradient(#00ACFF, #32db64);
+  }
+  .main-show .item {
+    background-color: transparent;
+  }
+
+  .main-show h2 {
+    font-size: 2rem;
+    color: #fff;
+  }
 
 }

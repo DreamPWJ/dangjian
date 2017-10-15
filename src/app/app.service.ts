@@ -1,27 +1,24 @@
-import { LoadingController, AlertController, ToastController } from 'ionic-angular';
-import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import {LoadingController, AlertController, ToastController} from 'ionic-angular';
+import {Injectable} from '@angular/core';
+import {Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class AppGlobal {
   //缓存key的配置
-  static cache: any = {
-
-  }
+  static cache: any = {}
   //接口域名
   static domain = "http://jxdj.rzzyfw.com"
 
-  //接口路径
-  static API: any = {
-
-  };
+  //接口地址
+  static api: any = "http://jxdj1.rzzyfw.com"
 }
 
 @Injectable()
 export class AppService {
 
-  constructor(public http: Http, public loadingCtrl: LoadingController, private alertCtrl: AlertController, private toastCtrl: ToastController, ) { }
+  constructor(public http: Http, public loadingCtrl: LoadingController, private alertCtrl: AlertController, private toastCtrl: ToastController,) {
+  }
 
   // 对参数进行编码
   encode(params) {
@@ -65,7 +62,7 @@ export class AppService {
     if (loader) {
       loading.present();
     }
-    this.http.post(AppGlobal.domain + url, params)
+    this.http.post(url, params)
       .toPromise()
       .then(res => {
         var d = res.json();
@@ -145,6 +142,7 @@ export class AppService {
       console.error("window.localStorage error:" + e);
     }
   }
+
   getItem(key: string, callback) {
     try {
       var json = window.localStorage[key];

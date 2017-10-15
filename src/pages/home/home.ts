@@ -30,7 +30,10 @@ export class HomePage {
   }
 
   ionViewWillLeave() {
-    this.playPause(1);
+    if (this.typeFlag == 1) {//智慧党建
+      this.playPause(1);
+    }
+
   }
 
   /**

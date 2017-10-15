@@ -15,8 +15,9 @@ import {AppService} from "../../app/app.service";
   templateUrl: 'news-details.html',
 })
 export class NewsDetailsPage {
-
+  public newsDetailInfo:any={};
   constructor(public navCtrl: NavController, public navParams: NavParams,public  appService: AppService) {
+    this.newsDetailInfo = navParams.data;
   }
 
   ionViewDidLoad() {

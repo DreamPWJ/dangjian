@@ -4,15 +4,31 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <ion-navbar>
+<ion-header no-border>
+  <ion-navbar color="clam">
     <ion-title>{{newsInfo.title}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content >
+<ion-content class="main-show">
+  <div *ngIf="isNotData" class="isNotDataHint">
+    <ion-icon class="icon-notice"></ion-icon>
+    <p>暂无数据</p>
+  </div>
+  <ion-list  inset>
+<!--    <ion-card>-->
+      <ion-item *ngFor="let item of newsList"   [navPush]="'NewsDetailsPage'" [navParams]="{title:item.title,content:item.content}">
+        <ion-thumbnail item-start>
+          <img src="{{apiUrl+item.img_url}}" onerror="this.src='assets/img/main/1.jpg'">
+        </ion-thumbnail>
+        <h2>{{item.title}}</h2>
+        <ion-icon class="icon-right light" item-end></ion-icon>
+        <!--    <button ion-button  item-end>按钮</button>-->
+      </ion-item>
 
+<!--    </ion-card>-->
+
+  </ion-list>
 </ion-content>

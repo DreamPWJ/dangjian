@@ -98,7 +98,7 @@
           <ion-icon class="icon-recordfill"></ion-icon>
           <h3 text-nowrap>会议直播</h3>
         </a>
-        <a tabindex="8" [navPush]="'LiveBroadcastPage'" [navParams]="{type:2,title:'视频监控'}"class="royal-bg">
+        <a tabindex="8" [navPush]="'LiveBroadcastPage'" [navParams]="{type:2,title:'视频监控'}" class="royal-bg">
           <ion-icon class="icon-jiankong"></ion-icon>
           <h3 text-nowrap>视频监控</h3>
         </a>
@@ -114,11 +114,11 @@
           <ion-icon class="icon-dengtalighthouse1"></ion-icon>
           <h3 text-nowrap>灯塔在线</h3>
         </a>
-        <a tabindex="11" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=107" class="calm-bg">
+        <a tabindex="11" [navPush]="'NewsPage'" [navParams]="{id:107,title:'学习教育'}" class="calm-bg">
           <ion-icon class="icon-read"></ion-icon>
           <h3 text-nowrap>学习教育</h3>
         </a>
-        <a tabindex="12" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=109" class="assertive-bg">
+        <a tabindex="12" [navPush]="'NewsPage'" [navParams]="{id:109,title:'工作督查通报'}" class="assertive-bg">
           <ion-icon class="icon-servicefill"></ion-icon>
           <h3 text-nowrap>工作督查通报</h3>
         </a>
@@ -128,20 +128,20 @@
 
     <ion-row *ngIf="typeFlag==2" class="main-show sanwu" nowrap justify-content-center align-items-center text-center>
       <ion-col col-3>
-        <a tabindex="7" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=110" class="positive-bg">
+        <a tabindex="7" [navPush]="'NewsPage'" [navParams]="{id:110,title:'党务公开'}" class="positive-bg">
           <ion-icon class="icon-dangwugongkai"></ion-icon>
           <h3 text-nowrap>党务公开</h3>
         </a>
       </ion-col>
       <ion-col col-3>
-        <a tabindex="8" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=111" class="balanced-bg">
+        <a tabindex="8" [navPush]="'NewsPage'" [navParams]="{id:111,title:'政务公开'}" class="balanced-bg">
           <ion-icon class="icon-babyfill"></ion-icon>
           <h3 text-nowrap>政务公开</h3>
         </a>
       </ion-col>
 
       <ion-col col-3>
-        <a tabindex="9" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=112" class="yellow-bg">
+        <a tabindex="9" [navPush]="'NewsPage'" [navParams]="{id:112,title:'财务公开'}" class="yellow-bg">
           <ion-icon class="icon-sponsorfill"></ion-icon>
           <h3 text-nowrap>财务公开</h3>
         </a>
@@ -151,7 +151,7 @@
     <ion-row *ngIf="typeFlag==3" class="main-show dangyuan" nowrap justify-content-center align-items-center
              text-center>
       <ion-col col-3>
-        <a tabindex="7" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=114" class="assertive-bg fengcai">
+        <a tabindex="7" [navPush]="'NewsPage'" [navParams]="{id:114,title:'党员风采'}" class="assertive-bg fengcai">
           <ion-icon class="icon-dangyuandangyuanguanlidangyuanzhuanchu"></ion-icon>
           <h3 text-nowrap>党员风采</h3>
         </a>
@@ -159,22 +159,22 @@
       </ion-col>
 
       <ion-col col-3>
-        <a tabindex="8" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=113" class="assertive-bg ">
+        <a tabindex="8" [navPush]="'NewsPage'" [navParams]="{id:113,title:'每月农话'}" class="assertive-bg ">
           <ion-icon class="icon-1"></ion-icon>
           <h3 text-nowrap>每月农话 </h3>
         </a>
-        <a tabindex="9" href="" class="assertive-bg">
+        <a tabindex="9" [navPush]="'NewsPage'" [navParams]="{id:0,title:'党员承诺'}"  class="assertive-bg">
           <ion-icon class="icon-dangjian"></ion-icon>
           <h3 text-nowrap>党员承诺</h3>
         </a>
       </ion-col>
 
       <ion-col col-3>
-        <a tabindex="10" href="" class="assertive-bg">
+        <a tabindex="10" [navPush]="'NewsPage'" [navParams]="{id:0,title:'党建论坛'}" class="assertive-bg">
           <ion-icon class="icon-community"></ion-icon>
           <h3 text-nowrap>党建论坛</h3>
         </a>
-        <a tabindex="11" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=115" class="assertive-bg">
+        <a tabindex="11" [navPush]="'NewsPage'" [navParams]="{id:115,title:'两学一做'}" class="assertive-bg">
           <ion-icon class="icon-friendfamous"></ion-icon>
           <h3 text-nowrap>两学一做</h3>
         </a>
@@ -183,7 +183,7 @@
     </ion-row>
     <ion-row *ngIf="typeFlag==4" class="main-show fupin" nowrap justify-content-center align-items-center text-center>
       <ion-col col-3>
-        <a tabindex="7" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=116" class="positive-bg zhengce">
+        <a tabindex="7" [navPush]="'NewsPage'" [navParams]="{id:116,title:'扶贫政策学习'}" class="positive-bg zhengce">
           <ion-icon class="icon-fupingongzuokaizhan"></ion-icon>
           <h3 text-nowrap>扶贫政策学习</h3>
         </a>
@@ -191,22 +191,22 @@
       </ion-col>
 
       <ion-col col-3>
-        <a tabindex="8" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=117" class="assertive-bg ">
+        <a tabindex="8" [navPush]="'NewsPage'" [navParams]="{id:117,title:'扶贫产业项目'}" class="assertive-bg ">
           <ion-icon class="icon-taoxiaopu"></ion-icon>
           <h3 text-nowrap>扶贫产业项目 </h3>
         </a>
-        <a tabindex="9" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=118" class="yellow-bg">
+        <a tabindex="9" [navPush]="'NewsPage'" [navParams]="{id:118,title:'扶贫公示公告'}" class="yellow-bg">
           <ion-icon class="icon-gonggao"></ion-icon>
           <h3 text-nowrap>扶贫公示公告</h3>
         </a>
       </ion-col>
 
       <ion-col col-3>
-        <a tabindex="10" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=119" class="energized-bg">
+        <a tabindex="10" [navPush]="'NewsPage'" [navParams]="{id:119,title:'志愿服务'}" class="energized-bg">
           <ion-icon class="icon-zhiyuanfuwu"></ion-icon>
           <h3 text-nowrap>志愿服务</h3>
         </a>
-        <a tabindex="11" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=120" class="balanced-bg">
+        <a tabindex="11" [navPush]="'NewsPage'" [navParams]="{id:120,title:'第一书记专栏'}" class="balanced-bg">
           <ion-icon class="icon-hotfill"></ion-icon>
           <h3 text-nowrap>第一书记专栏</h3>
         </a>
@@ -215,7 +215,7 @@
     </ion-row>
     <ion-row *ngIf="typeFlag==5" class="main-show damei" nowrap justify-content-center align-items-center text-center>
       <ion-col col-2>
-        <a tabindex="7" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=106" class="calm-bg juxian">
+        <a tabindex="7" [navPush]="'NewsPage'" [navParams]="{id:106,title:'大美莒县'}"  class="calm-bg juxian">
           <!--    <img  src="assets/img/main/juxian.png"/>-->
           <ion-icon class="icon-shanshui"></ion-icon>
           <h3 text-nowrap>大美莒县</h3>
@@ -223,33 +223,33 @@
       </ion-col>
 
       <ion-col col-2>
-        <a tabindex="8" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=121" class="balanced-bg">
+        <a tabindex="8" [navPush]="'NewsPage'" [navParams]="{id:121,title:'特色农产'}" class="balanced-bg">
           <ion-icon class="icon-1"></ion-icon>
           <h3 text-nowrap>特色农产</h3>
         </a>
-        <a tabindex="9" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=142" class="assertive-bg">
+        <a tabindex="9" [navPush]="'NewsPage'" [navParams]="{id:142,title:'随手拍 曝光台'}"  class="assertive-bg">
           <ion-icon class="icon-camerafill"></ion-icon>
           <h3 text-nowrap>随手拍 曝光台</h3>
         </a>
       </ion-col>
 
       <ion-col col-2>
-        <a tabindex="10" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=122" class="positive-bg">
+        <a tabindex="10" [navPush]="'NewsPage'" [navParams]="{id:122,title:'龙头企业'}"  class="positive-bg">
           <ion-icon class="icon-qi"></ion-icon>
           <h3 text-nowrap>龙头企业</h3>
         </a>
-        <a tabindex="11" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=124" class="balanced-bg">
+        <a tabindex="11" [navPush]="'NewsPage'" [navParams]="{id:124,title:'乡村美景'}"  class="balanced-bg">
           <ion-icon class="icon-meijingzhuizong"></ion-icon>
           <h3 text-nowrap>乡村美景</h3>
         </a>
       </ion-col>
 
       <ion-col col-2>
-        <a tabindex="13" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=123" class="energized-bg">
+        <a tabindex="13" [navPush]="'NewsPage'" [navParams]="{id:123,title:'莒县播报'}" class="energized-bg">
           <ion-icon class="icon-global"></ion-icon>
           <h3 text-nowrap>莒县播报</h3>
         </a>
-        <a tabindex="14" href="{{domain}}/weixin2/dianshi/qiaoshan/list1.aspx?id=141" class="royal-bg">
+        <a tabindex="14" [navPush]="'NewsPage'" [navParams]="{id:141,title:'信息之窗'}" class="royal-bg">
           <ion-icon class="icon-newsfill"></ion-icon>
           <h3 text-nowrap>信息之窗</h3>
         </a>
