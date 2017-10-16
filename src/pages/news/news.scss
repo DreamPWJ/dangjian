@@ -3,13 +3,31 @@ page-news {
     background: -webkit-linear-gradient(#00ACFF, #32db64);
     background: linear-gradient(#00ACFF, #32db64);
   }
+
+  .main-show .list {
+    width: 80%;
+    padding: 1rem 0;
+    background-color: rgba(255,255,255,0.1);
+    margin: calc(10vh - 50px) auto;
+    min-height: 80vh;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 3px  rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 3px  rgba(0, 0, 0, .3);
+  }
+
   .main-show .item {
+    padding: 0 2rem;
     background-color: transparent;
   }
 
   .main-show h2 {
     font-size: 2rem;
     color: #fff;
+  }
+
+  .main-show a:hover, .main-show a:focus {
+    background-color: #f26604;
+    opacity: 1;
   }
 
 }

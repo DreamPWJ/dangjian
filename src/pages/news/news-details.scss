@@ -5,4 +5,15 @@ page-news-details {
     color: #fff;
     font-size: 1.8rem;
   }
+
+  .main-show .content{
+    width: 96%;
+    padding: 2rem ;
+    background-color: rgba(255,255,255,0.1);
+    margin: calc(10vh - 50px) auto;
+    min-height: 80vh;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 3px  rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 3px  rgba(0, 0, 0, .3);
+  }
 }

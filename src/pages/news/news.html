@@ -17,16 +17,16 @@
     <ion-icon class="icon-notice"></ion-icon>
     <p>暂无数据</p>
   </div>
-  <ion-list  inset>
+  <ion-list class="list"  >
 <!--    <ion-card>-->
-      <ion-item *ngFor="let item of newsList"   [navPush]="'NewsDetailsPage'" [navParams]="{title:item.title,content:item.content}">
+      <a tabindex="{{index}}"  ion-item *ngFor="let item of newsList"   [navPush]="'NewsDetailsPage'" [navParams]="{title:item.title,content:item.content}">
         <ion-thumbnail item-start>
           <img src="{{apiUrl+item.img_url}}" onerror="this.src='assets/img/main/1.jpg'">
         </ion-thumbnail>
         <h2>{{item.title}}</h2>
         <ion-icon class="icon-right light" item-end></ion-icon>
         <!--    <button ion-button  item-end>按钮</button>-->
-      </ion-item>
+      </a>
 
 <!--    </ion-card>-->
 
