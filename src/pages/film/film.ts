@@ -17,7 +17,7 @@ import {AppGlobal, AppService} from "../../app/app.service";
 export class FilmPage {
   public filmId: number;
   public filmsInfo:any={};
-  public videoUrl: string =AppGlobal.domain + "/upload/dy/yyzls/1.mp4"  //AppGlobal.domain + "/upload/dy/yyzls/1.mp4";
+  public videoUrl: string =AppGlobal.api + "/upload/1.mp4"  //AppGlobal.domain + "/upload/dy/yyzls/1.mp4";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public  appService: AppService) {
     this.filmId = navParams.data.id;

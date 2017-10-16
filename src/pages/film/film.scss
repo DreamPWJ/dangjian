@@ -6,14 +6,16 @@ page-film {
   }
 
   .main-show video {
+    width: calc(100% - 22px);
+    height:calc(100% - 22px) ;
     margin: auto;
     padding: 0;
     background-color: #000;
     border: none;
     border-radius: 6px;
     min-width: 45vw;
-    max-width: 60vw;
-    max-height: 55vh;
+/*    max-width: 60vw;
+    max-height: 55vh;*/
     -webkit-box-shadow: 0 0 0 10px #fff,
     0 3px 5px 10px rgba(0, 0, 0, .6);
     box-shadow: 0 0 0 10px #fff,
