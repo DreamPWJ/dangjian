@@ -6,13 +6,13 @@ page-film {
   }
 
   .main-show video {
-    width: calc(100% - 22px);
-    height:calc(100% - 22px) ;
+    width: calc(100% - 16px);
+    height:calc(100% - 16px) ;
     margin: auto;
     padding: 0;
     background-color: #000;
     border: none;
-    border-radius: 6px;
+/*    border-radius: 6px;*/
     min-width: 45vw;
 /*    max-width: 60vw;
     max-height: 55vh;*/

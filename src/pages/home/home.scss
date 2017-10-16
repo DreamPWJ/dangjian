@@ -177,7 +177,7 @@ page-home {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
   }
 
-  .main-show-hongse.hongse img:hover, .main-show-hongse.hongse a:focus img {
+  .main-show-hongse.hongse a:hover img, .main-show-hongse.hongse a:focus img {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     border: 3px solid #fff;
