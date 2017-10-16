@@ -12,12 +12,12 @@
 </ion-header>
 
 
-<ion-content class="main-show">
+<ion-content class="main-show" >
   <div *ngIf="isNotData" class="isNotDataHint">
     <ion-icon class="icon-notice"></ion-icon>
     <p>暂无数据</p>
   </div>
-  <ion-list class="list"  >
+  <ion-list *ngIf="!isNotData" class="list"  >
 <!--    <ion-card>-->
       <a tabindex="{{index}}"  ion-item *ngFor="let item of newsList"   [navPush]="'NewsDetailsPage'" [navParams]="{title:item.title,content:item.content}">
         <ion-thumbnail item-start>
