@@ -56,49 +56,25 @@
       </ion-col>
     </ion-row>
     <ion-row *ngIf="typeFlag==6" class="film-search" justify-content-center text-center margin-top>
-      <ion-searchbar tabindex="6" no-padding col-2 placeholder="搜索电影"
+      <ion-searchbar tabindex="7" no-padding col-2 placeholder="搜索电影"
                      (ionInput)="searchFilm($event)"></ion-searchbar>
-      <a tabindex="7" class="film-type" ion-button round>热门电影</a>
-      <a tabindex="8" class="film-type" ion-button round outline>最新推荐</a>
-      <a tabindex="9" class="film-type" ion-button round outline>最新上线</a>
-      <a tabindex="10" class="film-type" ion-button round outline>最受好评</a>
-      <a tabindex="11" class="film-type" ion-button round outline>特色策划</a>
-      <a tabindex="12" class="film-type" ion-button round outline>热血战争</a>
+      <a tabindex="8" class="film-type" ion-button round>热门电影</a>
+      <a tabindex="9" class="film-type" ion-button round outline>最新推荐</a>
+      <a tabindex="10" class="film-type" ion-button round outline>最新上线</a>
+      <a tabindex="11" class="film-type" ion-button round outline>最受好评</a>
+      <a tabindex="12" class="film-type" ion-button round outline>特色策划</a>
+      <a tabindex="13" class="film-type" ion-button round outline>热血战争</a>
 
     </ion-row>
-    <!--    <ion-row *ngIf="typeFlag==0" class="main-show" justify-content-around align-items-center text-center>
-          <ion-col col-2>
-            <a tabindex="7" class="energized-bg" (click)="liveStreaming(1)">
-              <ion-icon name="videocam"></ion-icon>
-              <h3 text-nowrap>视频直播</h3>
-            </a>
-            <a tabindex="8" class="royal-bg" (click)="liveStreaming(1)">
-              <ion-icon name="logo-youtube"></ion-icon>
-              <h3 text-nowrap>视频录播</h3>
-            </a>
-          </ion-col>
 
-          <video col-6 controls="controls" autoplay="autoplay" src="{{videoUrl}}">
-          </video>
-          <ion-col col-2>
-            <a tabindex="9" class="calm-bg" (click)="liveStreaming(0)">
-              <ion-icon class="icon-recordfill"></ion-icon>
-              <h3 text-nowrap>宣传视频</h3>
-            </a>
-            <a tabindex="10" class="balanced-bg" (click)="liveStreaming(1)">
-              <ion-icon class="icon-videofill"></ion-icon>
-              <h3 text-nowrap>直播视频</h3>
-            </a>
-          </ion-col>
-        </ion-row>-->
     <ion-row *ngIf="typeFlag==1" class="main-show dangjian" nowrap justify-content-around align-items-center
              text-center>
       <ion-col col-2>
-        <a tabindex="7" [navPush]="'LiveBroadcastPage'" [navParams]="{type:1,title:'会议直播'}"  class="energized-bg">
+        <a tabindex="7"  [navPush]="'LiveBroadcastPage'" [navParams]="{type:1,title:'会议直播'}"  class="energized-bg">
           <ion-icon class="icon-recordfill"></ion-icon>
           <h3 text-nowrap>会议直播</h3>
         </a>
-        <a tabindex="8" [navPush]="'LiveBroadcastPage'" [navParams]="{type:2,title:'视频监控'}" class="royal-bg">
+        <a tabindex="8"  [navPush]="'LiveBroadcastPage'" [navParams]="{type:2,title:'视频监控'}" class="royal-bg">
           <ion-icon class="icon-jiankong"></ion-icon>
           <h3 text-nowrap>视频监控</h3>
         </a>
@@ -110,11 +86,11 @@
       <video id="home-video" controls="controls" autoplay="autoplay" src="{{videoUrl}}">
       </video>
       <ion-col col-2>
-        <a tabindex="10" href="https://www.dtdjzx.gov.cn/" class="balanced-bg">
+        <a tabindex="10"   href="https://www.dtdjzx.gov.cn/" class="balanced-bg">
           <ion-icon class="icon-dengtalighthouse1"></ion-icon>
           <h3 text-nowrap>灯塔在线</h3>
         </a>
-        <a tabindex="11" [navPush]="'NewsPage'" [navParams]="{id:107,title:'学习教育'}" class="calm-bg">
+        <a tabindex="11"  [navPush]="'NewsPage'" [navParams]="{id:107,title:'学习教育'}" class="calm-bg">
           <ion-icon class="icon-read"></ion-icon>
           <h3 text-nowrap>学习教育</h3>
         </a>
@@ -257,8 +233,8 @@
     </ion-row>
 
     <ion-row *ngIf="typeFlag==6" class="main-show-hongse hongse" justify-content-center text-center>
-      <a tabindex="{{index+12}}" col-2 *ngFor="let item of redFilms">
-        <img (click)="pushFilmPage(item.id)" width="140px" height="180px" [src]="item.images.medium"
+      <a tabindex="{{index+13}}"   col-2 *ngFor="let item of redFilms">
+        <img (click)="pushFilmPage(item.id)"  width="140px" height="180px" [src]="item.images.medium"
              alt="{{item.alt}}"/>
         <h4 text-nowrap>{{item.title}}</h4>
       </a>
