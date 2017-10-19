@@ -49,7 +49,7 @@
         </a>
       </ion-col>
     </ion-row>
-    <ion-row *ngIf="typeFlag==6" class="film-search" justify-content-center text-center margin-top>
+    <ion-row *ngIf="typeFlag==6"  contenteditable="true" class="film-search" justify-content-center text-center margin-top>
       <ion-searchbar tabindex="7" no-padding col-2 placeholder="搜索电影"
                      (ionInput)="searchFilm($event)"></ion-searchbar>
       <a tabindex="8" class="film-type" ion-button round>热门电影</a>
@@ -80,7 +80,7 @@
       <video id="home-video" controls="controls" autoplay="autoplay" src="{{videoUrl}}">
       </video>
       <ion-col col-2>
-        <a tabindex="10"   href="https://www.dtdjzx.gov.cn/" class="balanced-bg">
+        <a tabindex="10"   (click)="windowOpen('https://www.dtdjzx.gov.cn/')" (keypress)="windowOpen('https://www.dtdjzx.gov.cn/')"    class="balanced-bg">
           <ion-icon class="icon-dengtalighthouse1"></ion-icon>
           <h3 text-nowrap>灯塔在线</h3>
         </a>

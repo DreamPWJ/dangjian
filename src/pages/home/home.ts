@@ -60,25 +60,31 @@ export class HomePage {
 
   /**
    * 导航视频监控页面
-   * @param id
    */
-  pushLiveBroadcastPage(type:number,title: string) {
+  pushLiveBroadcastPage(type: number, title: string) {
     this.navCtrl.push('LiveBroadcastPage', {
       type: type,
-      title:title
+      title: title
     });
   }
 
   /**
    * 导航新闻页面
-   * @param id
    */
-  pushNewsPage(id:number,title: string) {
+  pushNewsPage(id: number, title: string) {
     this.navCtrl.push('NewsPage', {
       id: id,
-      title:title
+      title: title
     });
   }
+
+  /**
+   * 导航外部网址页面
+   */
+  windowOpen(url: string) {
+    window.open(url)
+  }
+
   /**
    * 获取电影数据
    */
@@ -88,7 +94,6 @@ export class HomePage {
       this.redFilms = data.subjects;
     }, true)
   }
-
 
 
   /**
@@ -111,7 +116,7 @@ export class HomePage {
    * 导航电影页面
    * @param id
    */
-  pushFilmPage(id:number,event: Event) {
+  pushFilmPage(id: number, event: Event) {
     event.stopPropagation();
     this.navCtrl.push('FilmPage', {
       id: id,
@@ -123,7 +128,7 @@ export class HomePage {
    * @param type
    */
   playPause(type) {
-   /* let myVideo = document.querySelector('#home-video');*/
+    /* let myVideo = document.querySelector('#home-video');*/
     let myVideo = document.getElementsByTagName('video')[0];
     if (type == 0) {
       myVideo.play();
