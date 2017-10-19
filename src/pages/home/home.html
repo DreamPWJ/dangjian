@@ -64,15 +64,15 @@
     <ion-row *ngIf="typeFlag==1" class="main-show dangjian" nowrap justify-content-around align-items-center
              text-center>
       <ion-col col-2>
-        <a tabindex="7"  [navPush]="'LiveBroadcastPage'" [navParams]="{type:1,title:'会议直播'}"  class="energized-bg">
+        <a tabindex="7" (click)="pushLiveBroadcastPage(1,'会议直播')" (keypress)="pushLiveBroadcastPage(1,'会议直播')" class="energized-bg">
           <ion-icon class="icon-recordfill"></ion-icon>
           <h3 text-nowrap>会议直播</h3>
         </a>
-        <a tabindex="8"  [navPush]="'LiveBroadcastPage'" [navParams]="{type:2,title:'视频监控'}" class="royal-bg">
+        <a tabindex="8" (click)="pushLiveBroadcastPage(2,'视频监控')" (keypress)="pushLiveBroadcastPage(2,'视频监控')"  class="royal-bg">
           <ion-icon class="icon-jiankong"></ion-icon>
           <h3 text-nowrap>视频监控</h3>
         </a>
-        <a tabindex="9" [navPush]="'NewsPage'" [navParams]="{id:108,title:'联系服务群众'}" class="positive-bg">
+        <a tabindex="9" (click)="pushNewsPage(108,'联系服务群众')" (keypress)="pushNewsPage(108,'联系服务群众')"   class="positive-bg">
           <ion-icon class="icon-phone"></ion-icon>
           <h3 text-nowrap>联系服务群众</h3>
         </a>
@@ -84,11 +84,11 @@
           <ion-icon class="icon-dengtalighthouse1"></ion-icon>
           <h3 text-nowrap>灯塔在线</h3>
         </a>
-        <a tabindex="11"  [navPush]="'NewsPage'" [navParams]="{id:107,title:'学习教育'}" class="calm-bg">
+        <a tabindex="11"  (click)="pushNewsPage(107,'学习教育')" (keypress)="pushNewsPage(107,'学习教育')"   class="calm-bg">
           <ion-icon class="icon-read"></ion-icon>
           <h3 text-nowrap>学习教育</h3>
         </a>
-        <a tabindex="12" [navPush]="'NewsPage'" [navParams]="{id:109,title:'工作督查通报'}" class="assertive-bg">
+        <a tabindex="12" (click)="pushNewsPage(109,'工作督查通报')" (keypress)="pushNewsPage(109,'工作督查通报')" class="assertive-bg">
           <ion-icon class="icon-servicefill"></ion-icon>
           <h3 text-nowrap>工作督查通报</h3>
         </a>
@@ -185,7 +185,7 @@
     </ion-row>
     <ion-row *ngIf="typeFlag==5" class="main-show damei" nowrap justify-content-center align-items-center text-center>
       <ion-col col-2>
-        <a tabindex="7" [navPush]="'NewsPage'" [navParams]="{id:106,title:'大美莒县'}"  class="calm-bg juxian">
+        <a tabindex="7" (click)="pushNewsPage(106,'大美莒县')" (keypress)="pushNewsPage(106,'大美莒县')"    class="calm-bg juxian">
           <!--    <img  src="assets/img/main/juxian.png"/>-->
           <ion-icon class="icon-shanshui"></ion-icon>
           <h3 text-nowrap>大美莒县</h3>
@@ -227,7 +227,7 @@
     </ion-row>
 
     <ion-row *ngIf="typeFlag==6" class="main-show-hongse hongse" justify-content-center text-center>
-      <a tabindex="{{index+13}}"   col-2 *ngFor="let item of redFilms">
+      <a tabindex="{{index+13}}" (keypress)="pushFilmPage(item.id,$event)"  col-2 *ngFor="let item of redFilms">
         <img (click)="pushFilmPage(item.id,$event)"  width="140px" height="180px" [src]="item.images.medium"
              alt="{{item.alt}}"/>
         <h4 text-nowrap>{{item.title}}</h4>

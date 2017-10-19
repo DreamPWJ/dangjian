@@ -46,4 +46,15 @@ export class NewsPage {
       this.newsList = data;
     }, true)
   }
+
+  /**
+   * 导航新闻详情页面
+   * @param id
+   */
+  pushNewsDetailsPage(title: string,content:string) {
+    this.navCtrl.push('NewsDetailsPage', {
+      title:title,
+      content:content
+    });
+  }
 }

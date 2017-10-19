@@ -58,7 +58,27 @@ export class HomePage {
     }
   }
 
+  /**
+   * 导航视频监控页面
+   * @param id
+   */
+  pushLiveBroadcastPage(type:number,title: string) {
+    this.navCtrl.push('LiveBroadcastPage', {
+      type: type,
+      title:title
+    });
+  }
 
+  /**
+   * 导航新闻页面
+   * @param id
+   */
+  pushNewsPage(id:number,title: string) {
+    this.navCtrl.push('NewsPage', {
+      id: id,
+      title:title
+    });
+  }
   /**
    * 获取电影数据
    */
@@ -70,17 +90,6 @@ export class HomePage {
   }
 
 
-  /**
-   * 视频切换
-   * @param type
-   */
-  liveStreaming(type) {
-    if (type == 0) {  //主页
-      this.videoUrl = this.domain + "/upload/dy/yyzls/1.mp4"
-    } else if (type == 1) { //直播
-      this.videoUrl = "http://u166.auto.s.wanglitiaoyi.com/live/3693838317.m3u8"
-    }
-  }
 
   /**
    * 搜索电影
