@@ -102,7 +102,8 @@ export class HomePage {
    * 导航电影页面
    * @param id
    */
-  pushFilmPage(id) {
+  pushFilmPage(id:number,event: Event) {
+    event.stopPropagation();
     this.navCtrl.push('FilmPage', {
       id: id,
     });
