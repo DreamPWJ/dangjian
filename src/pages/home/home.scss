@@ -16,6 +16,14 @@ page-home {
     }
   }
 
+  .login {
+    position: fixed;
+    top: 1.6rem;
+    right: 3rem;
+    color: #fff;
+    font-size: 3.6rem;
+  }
+
   .grid {
     height: 100%;
   }
@@ -125,20 +133,19 @@ page-home {
     color: #fff;
   }
 
-/*  @media screen and (min-width: 320px) and (max-width: 480px) { //手机设备
-    .main-show{
-      width: 100%;
-      padding: 0.1rem;
-    }
-    .main-show .icon {
-      font-size: 3rem;
-    }
-    .main-show h3, .main-show .icon {
-     font-size: 1.2rem;
-    }
+  /*  @media screen and (min-width: 320px) and (max-width: 480px) { //手机设备
+      .main-show{
+        width: 100%;
+        padding: 0.1rem;
+      }
+      .main-show .icon {
+        font-size: 3rem;
+      }
+      .main-show h3, .main-show .icon {
+       font-size: 1.2rem;
+      }
 
-  }*/
-
+    }*/
 
   .main-show.dangjian a {
     margin: 1.6rem 1rem;
