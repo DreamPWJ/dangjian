@@ -26,8 +26,12 @@ export class LoginPage {
   }
 
   login() {
-    this.appService.toast(JSON.stringify(this.account),function () {
+/*    this.appService.isLogin(true);*/
+    /*   this.appService.confirm("登录",JSON.stringify(this.account),function () {
 
-    })
+       })*/
+    /*    this.appService.toast(JSON.stringify(this.account),function () {
+
+        })*/
   }
 }

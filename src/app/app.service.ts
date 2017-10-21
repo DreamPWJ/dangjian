@@ -1,12 +1,11 @@
-import {LoadingController, AlertController, ToastController, Toast} from 'ionic-angular';
 import {Injectable} from '@angular/core';
+import {LoadingController, AlertController, ToastController, Toast} from 'ionic-angular';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class AppGlobal {
-  //缓存key的配置
-  static cache: any = {}
+
   //接口域名
   static domain = "http://jxdj.rzzyfw.com"
 
@@ -99,27 +98,40 @@ export class AppService {
     }
   }
 
-  alert(message, callback?) {
-    if (callback) {
-      let alert = this.alertCtrl.create({
-        title: '提示',
-        message: message,
-        buttons: [{
-          text: "确定",
-          handler: data => {
+  alert(title, message) {
+    const alert = this.alertCtrl.create({
+      cssClass: 'alert',
+      title: title,
+      message: message,
+      buttons: ["确定"]
+    });
+    alert.present();
+  }
+
+
+  confirm(title, message, callback?, confirmText = '确定', cancelText = '取消', callbackCancel?) {
+    const alert = this.alertCtrl.create({
+      cssClass: 'confirm',
+      title: title,
+      message: message,
+      buttons: [{
+        text: cancelText,
+        handler: () => {
+          if (callbackCancel) {
+            callbackCancel();
+          }
+          console.log(cancelText);
+        }
+      }, {
+        text: confirmText,
+        handler: data => {
+          if (callback) {
             callback();
           }
-        }]
-      });
-      alert.present();
-    } else {
-      let alert = this.alertCtrl.create({
-        title: '提示',
-        message: message,
-        buttons: ["确定"]
-      });
-      alert.present();
-    }
+        }
+      }]
+    });
+    alert.present();
   }
 
   toast(message, callback?, position = 'top', ok = false, duration = 2000) {
@@ -161,4 +173,27 @@ export class AppService {
       console.error("window.localStorage error:" + e);
     }
   }
+
+  /**
+   * 是否登录提示
+   */
+  isLogin(isShow: boolean = false) {
+    if (!localStorage.getItem("userid")) {
+      if (isShow) {
+        this.confirm("登录", "登录体验更完善功能", () => {
+/*          this.navCtrl.push('LoginPage')*/
+        }, "登录", "暂不登录", () => {
+   /*       this.navCtrl.pop();*/
+        })
+      } else {
+        /*       this.navCtrl.push('LoginPage')*/
+      }
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 }
+
+
