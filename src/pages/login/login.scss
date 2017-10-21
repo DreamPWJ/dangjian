@@ -15,7 +15,7 @@ page-login {
   .logo {
     width: 100%;
     height: auto;
-    max-width: 25em;
+    max-width: 28em;
     margin: 0 auto;
     padding-bottom: 50px;
   }
@@ -37,7 +37,6 @@ page-login {
     color: white;
   }
   ion-item {
-    // border-radius: 30px !important;
     padding-left: 10px !important;
     margin-bottom: 10px;
     background-color: #f6f6f6;
@@ -48,11 +47,11 @@ page-login {
     margin: 0;
   }
   .login-button {
-    width: 95%;
+    width: 96%;
     height: 4.8rem;
     height: 4.8rem;
     border-radius: 5px;
-    font-size: 1.6em;
+    font-size: 1.5em;
     // border: 1px solid #fff;
     background-color: #ef473a;
   }
