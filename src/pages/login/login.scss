@@ -7,7 +7,7 @@ page-login {
     border-color: transparent;
   }
   .scroll-content {
-    background-image: radial-gradient(center center, ellipse cover, #ffeda3, #ffc800);
+    background-image: radial-gradient(center center, ellipse cover, #ef473a, #ffc800);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -33,26 +33,25 @@ page-login {
       max-width: 40%;
     }
   }
-  span {
-    color: white;
+
+  ion-list {
+    margin: 0;
   }
+
   ion-item {
     padding-left: 10px !important;
     margin-bottom: 10px;
     background-color: #f6f6f6;
     opacity: 0.7;
-    font-size: 0.9em;
+    font-size: 1em;
   }
-  ion-list {
-    margin: 0;
-  }
+
   .login-button {
     width: 96%;
     height: 4.8rem;
     height: 4.8rem;
     border-radius: 5px;
     font-size: 1.5em;
-    // border: 1px solid #fff;
     background-color: #ef473a;
   }
 }
