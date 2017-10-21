@@ -49,17 +49,7 @@
         </a>
       </ion-col>
     </ion-row>
-    <ion-row *ngIf="typeFlag==6"  contenteditable="true" class="film-search" justify-content-center text-center margin-top>
-      <ion-searchbar tabindex="7" no-padding col-2 placeholder="搜索电影"
-                     (ionInput)="searchFilm($event)"></ion-searchbar>
-      <a tabindex="8" class="film-type" ion-button round>热门电影</a>
-      <a tabindex="9" class="film-type" ion-button round outline>最新推荐</a>
-      <a tabindex="10" class="film-type" ion-button round outline>最新上线</a>
-      <a tabindex="11" class="film-type" ion-button round outline>最受好评</a>
-      <a tabindex="12" class="film-type" ion-button round outline>特色策划</a>
-      <a tabindex="13" class="film-type" ion-button round outline>热血战争</a>
 
-    </ion-row>
 
     <ion-row *ngIf="typeFlag==1" class="main-show dangjian" nowrap justify-content-around align-items-center
              text-center>
@@ -226,6 +216,17 @@
       </ion-col>
     </ion-row>
 
+    <ion-row *ngIf="typeFlag==6"   class="film-search" justify-content-center text-center margin-top>
+      <ion-searchbar tabindex="7" contenteditable="true" no-padding col-2 placeholder="搜索电影"
+                     (ionInput)="searchFilm($event)"></ion-searchbar>
+      <a tabindex="8" class="film-type" ion-button round>热门电影</a>
+      <a tabindex="9" class="film-type" ion-button round outline>最新推荐</a>
+      <a tabindex="10" class="film-type" ion-button round outline>最新上线</a>
+      <a tabindex="11" class="film-type" ion-button round outline>最受好评</a>
+      <a tabindex="12" class="film-type" ion-button round outline>特色策划</a>
+      <a tabindex="13" class="film-type" ion-button round outline>热血战争</a>
+
+    </ion-row>
     <ion-row *ngIf="typeFlag==6" class="main-show-hongse hongse" justify-content-center text-center>
       <a tabindex="{{index+13}}" (keypress)="pushFilmPage(item.id,$event)"  col-2 *ngFor="let item of redFilms">
         <img (click)="pushFilmPage(item.id,$event)"  width="140px" height="180px" [src]="item.images.medium"

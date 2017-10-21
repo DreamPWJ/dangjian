@@ -82,7 +82,7 @@ export class HomePage {
    * 导航外部网址页面
    */
   windowOpen(url: string) {
-    window.open(url)
+    window.open(url,'_self ')
   }
 
   /**
