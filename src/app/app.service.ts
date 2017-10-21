@@ -1,4 +1,4 @@
-import {LoadingController, AlertController, ToastController} from 'ionic-angular';
+import {LoadingController, AlertController, ToastController, Toast} from 'ionic-angular';
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
@@ -16,6 +16,7 @@ export class AppGlobal {
 
 @Injectable()
 export class AppService {
+  public toasts: Toast;
 
   constructor(public http: Http, public loadingCtrl: LoadingController, private alertCtrl: AlertController, private toastCtrl: ToastController,) {
   }
@@ -121,13 +122,20 @@ export class AppService {
     }
   }
 
-  toast(message, callback?) {
-    let toast = this.toastCtrl.create({
+  toast(message, callback?, position = 'top', ok = false, duration = 2000) {
+    if (this.toasts) {
+      this.toasts.dismiss();
+    }
+    this.toasts = this.toastCtrl.create({
+      cssClass: '',
       message: message,
-      duration: 2000,
-      dismissOnPageChange: true,
+      position: position,//top, bottom and middle
+      duration: ok ? null : duration,
+      showCloseButton: ok,
+      dismissOnPageChange: false,//	Whether to dismiss the toast when navigating to a new page.
+      closeButtonText: '确定'
     });
-    toast.present();
+    this.toasts.present();
     if (callback) {
       callback();
     }
