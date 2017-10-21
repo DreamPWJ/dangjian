@@ -53,7 +53,7 @@ $tabs-ios-border-color: #EBEBEB !default;
 // Material Design only Sass variables can go here
 $toolbar-md-border-color: transparent!default;
 $tabs-md-border-color: #EBEBEB !default;
-$toast-md-background:#f53d3d;
+$toast-md-background:color($colors, primary) !default;
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here

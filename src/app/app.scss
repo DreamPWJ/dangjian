@@ -71,6 +71,14 @@ $colors-list: (light:$light, stable:$stable, positive:$positive, calm:$calm, bal
   -webkit-transform: translate(-50%, -50%);
 }
 
+.toast {
+  text-align: center !important;
+}
+
+.item-block:last-child {
+  border-bottom: none!important;
+}
+
 .transparent-header {
   // This is just to make the header transparent and button/icon with white color
   .toolbar-content,

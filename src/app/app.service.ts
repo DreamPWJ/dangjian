@@ -127,7 +127,7 @@ export class AppService {
       this.toasts.dismiss();
     }
     this.toasts = this.toastCtrl.create({
-      cssClass: '',
+      cssClass: 'toast',
       message: message,
       position: position,//top, bottom and middle
       duration: ok ? null : duration,
