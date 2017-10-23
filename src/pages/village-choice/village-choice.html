@@ -1,14 +1,14 @@
 <ion-content padding class="transparent-header" [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
-  <ion-header>
+<!--  <ion-header>
     <ion-navbar>
       <ion-title>{{videoType.title}}村庄</ion-title>
     </ion-navbar>
-  </ion-header>
+  </ion-header>-->
 
   <ion-grid class="center-center " padding>
-    <ion-row class="main-grid" justify-content-between align-items-center text-center>
+    <ion-row class="main-grid" justify-content-start  align-items-center text-center>
       <ion-col col-2 *ngFor="let item of villageData;let i=index;" margin>
-        <a tabindex="{{index}}" (click)="pushLiveBroadcastPage(i,item.name,item.outerUrl,item.innerUrl)"
+        <a tabindex="{{index}}"  (click)="pushLiveBroadcastPage(i,item.name,item.outerUrl,item.innerUrl)"
            (keypress)="pushLiveBroadcastPage(i,item.name,item.outerUrl,item.innerUrl)"
            color="{{villageType==i?'':'energized'}}" (focus)="villageFocus(i)" ion-button block large round>
           {{item.name}}

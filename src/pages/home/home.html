@@ -57,12 +57,12 @@
     <ion-row *ngIf="typeFlag==1" class="main-show dangjian" nowrap justify-content-around align-items-center
              text-center>
       <ion-col col-2>
-        <a tabindex="7" (click)="pushVillageChoicePage(1,'会议直播')" (keypress)="pushLiveBroadcastPage(1,'会议直播')"
+        <a tabindex="7" (click)="pushVillageChoicePage(1,'会议直播')" (keypress)="pushVillageChoicePage(1,'会议直播')"
            class="energized-bg">
           <ion-icon class="icon-recordfill"></ion-icon>
           <h3 text-nowrap>会议直播</h3>
         </a>
-        <a tabindex="8" (click)="pushVillageChoicePage(2,'视频监控')" (keypress)="pushLiveBroadcastPage(2,'视频监控')"
+        <a tabindex="8" (click)="pushVillageChoicePage(2,'视频监控')" (keypress)="pushVillageChoicePage(2,'视频监控')"
            class="royal-bg">
           <ion-icon class="icon-jiankong"></ion-icon>
           <h3 text-nowrap>视频监控</h3>
