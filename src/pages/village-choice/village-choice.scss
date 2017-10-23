@@ -1,12 +1,18 @@
 page-village-choice {
-.main-grid{
-  width: 80%;
-  padding:8rem 6rem;
-  margin: auto;
-  max-height: 90vh;
-  background-color: rgba(255,255,255,0.3);
-  border-radius: 10px;
-  -webkit-box-shadow: 0 2px 3px  rgba(0, 0, 0, .3);
-  box-shadow: 0 2px 3px  rgba(0, 0, 0, .3);
-}
+  .main-grid {
+    width: 80%;
+    padding: 8rem 6rem;
+    margin: auto;
+    max-height: 90vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+  }
+
+  .buttons  {
+    width: 75% !important;
+    -webkit-box-shadow: 0 6px 2px #ef473a;
+    box-shadow: 0 6px 2px #ef473a;
+  }
 }
