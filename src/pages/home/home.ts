@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {AppGlobal, AppService} from "../../app/app.service";
+import {Geolocation} from '@ionic-native/geolocation';
 
 @Component({
   selector: 'page-home',
@@ -11,8 +12,9 @@ export class HomePage {
   public videoUrl: string = this.domain + "/upload/dy/yyzls/1.mp4";
   public typeFlag: number = 1;
   public redFilms: any[];
+  public countryName:string="莒县"
 
-  constructor(public navCtrl: NavController, public appService: AppService) {
+  constructor(public navCtrl: NavController, public appService: AppService, public geolocation: Geolocation) {
   }
 
   ionViewDidLoad() {
@@ -21,6 +23,33 @@ export class HomePage {
     if (this.typeFlag == 6) { //红色影院
       this.getFilms();
     }
+    /**
+     * 地理定位
+     */
+    this.geolocation.getCurrentPosition().then((resp) => {
+      this.appService.setItem("latitude", resp.coords.latitude);
+      this.appService.setItem("longitude", resp.coords.longitude);
+      //获取当前位置 省市县数据
+      this.appService.httpGet("https://restapi.amap.com/v3/geocode/regeo", {
+        key: AppGlobal.gaoDeKey,
+        location: Number(resp.coords.longitude).toFixed(6) + "," + Number(resp.coords.latitude).toFixed(6),
+        radius: 100,//	查询POI的半径范围。取值范围：0~3000,单位：米
+        extensions: 'base',//返回结果控制
+        batch: false, //batch=true为批量查询。batch=false为单点查询
+        roadlevel: 0, //可选值：1，当roadlevel=1时，过滤非主干道路，仅输出主干道路数据
+        isHideLoad: true
+      }, (data) => {
+        console.log(data);
+        if (data.infocode == 10000) {
+          this.countryName = data.regeocode.addressComponent.township.replace(/镇/g,'');
+        }
+
+      }, )
+    }).catch((error) => {
+      console.log('Error getting location', error);
+    });
+
+
   }
 
   ionViewDidEnter() {
@@ -127,7 +156,7 @@ export class HomePage {
    * @param id
    */
   pushFilmPage(id: number, event: Event) {
-/*    event.stopPropagation();*/
+    /*    event.stopPropagation();*/
     this.navCtrl.push('FilmPage', {
       id: id,
     });

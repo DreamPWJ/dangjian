@@ -11,6 +11,9 @@ export class AppGlobal {
 
   //接口地址
   static api: any = "http://jxdj1.rzzyfw.com"
+
+  //高德web API服务key
+  static gaoDeKey: any = "972cafdc2472d8f779c5274db770ac22"
 }
 
 @Injectable()
