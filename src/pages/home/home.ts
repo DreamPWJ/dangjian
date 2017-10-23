@@ -127,7 +127,7 @@ export class HomePage {
    * @param id
    */
   pushFilmPage(id: number, event: Event) {
-    event.stopPropagation();
+/*    event.stopPropagation();*/
     this.navCtrl.push('FilmPage', {
       id: id,
     });

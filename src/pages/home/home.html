@@ -16,37 +16,37 @@
     </ion-row>
     <ion-row class="top-btn" nowrap justify-content-center text-center>
       <ion-col>
-        <a tabindex="1" (focus)="typeSwitch(1)" (click)="typeSwitch(1)" class="{{typeFlag==1?'top-btn-actived':''}}">
+        <a tabindex="1" (tap)="typeSwitch(1)"  (focus)="typeSwitch(1)"  class="{{typeFlag==1?'top-btn-actived':''}}">
           <ion-icon class="icon-dangjian"></ion-icon>
           <h4 text-nowrap>智慧党建</h4>
         </a>
       </ion-col>
       <ion-col>
-        <a tabindex="2" (focus)="typeSwitch(2)" (click)="typeSwitch(2)" class="{{typeFlag==2?'top-btn-actived':''}}">
+        <a tabindex="2" (tap)="typeSwitch(2)" (focus)="typeSwitch(2)" class="{{typeFlag==2?'top-btn-actived':''}}">
           <ion-icon name="mail-open"></ion-icon>
           <h4 text-nowrap>三务公开</h4>
         </a>
       </ion-col>
       <ion-col>
-        <a tabindex="3" (focus)="typeSwitch(3)" (click)="typeSwitch(3)" class="{{typeFlag==3?'top-btn-actived':''}}">
+        <a tabindex="3" (tap)="typeSwitch(3)" (focus)="typeSwitch(3)"  class="{{typeFlag==3?'top-btn-actived':''}}">
           <ion-icon class="icon-friendfill"></ion-icon>
           <h4 text-nowrap>党员之家</h4>
         </a>
       </ion-col>
       <ion-col>
-        <a tabindex="4" (focus)="typeSwitch(4)" (click)="typeSwitch(4)" class="{{typeFlag==4?'top-btn-actived':''}}">
+        <a tabindex="4" (tap)="typeSwitch(4)" (focus)="typeSwitch(4)"  class="{{typeFlag==4?'top-btn-actived':''}}">
           <ion-icon class="icon-sponsorfill"></ion-icon>
           <h4 text-nowrap>精准扶贫</h4>
         </a>
       </ion-col>
       <ion-col>
-        <a tabindex="5" (focus)="typeSwitch(5)" (click)="typeSwitch(5)" class="{{typeFlag==5?'top-btn-actived':''}}">
+        <a tabindex="5" (tap)="typeSwitch(5)" (focus)="typeSwitch(5)"  class="{{typeFlag==5?'top-btn-actived':''}}">
           <ion-icon class="icon-shanshui"></ion-icon>
           <h4 text-nowrap>大美莒县</h4>
         </a>
       </ion-col>
       <ion-col>
-        <a tabindex="6" (focus)="typeSwitch(6)" (click)="typeSwitch(6)" class="{{typeFlag==6?'top-btn-actived':''}}">
+        <a tabindex="6" (tap)="typeSwitch(6)" (focus)="typeSwitch(6)"  class="{{typeFlag==6?'top-btn-actived':''}}">
           <ion-icon class="icon-yingyuan"></ion-icon>
           <h4 text-nowrap>红色影院</h4>
         </a>
@@ -57,17 +57,17 @@
     <ion-row *ngIf="typeFlag==1" class="main-show dangjian" nowrap justify-content-around align-items-center
              text-center>
       <ion-col col-2>
-        <a tabindex="7" (click)="pushVillageChoicePage(1,'会议直播')" (keypress)="pushVillageChoicePage(1,'会议直播')"
+        <a tabindex="7" (tap)="pushVillageChoicePage(1,'会议直播')"  (keypress)="pushVillageChoicePage(1,'会议直播')"
            class="energized-bg">
           <ion-icon class="icon-recordfill"></ion-icon>
           <h3 text-nowrap>会议直播</h3>
         </a>
-        <a tabindex="8" (click)="pushVillageChoicePage(2,'视频监控')" (keypress)="pushVillageChoicePage(2,'视频监控')"
+        <a tabindex="8" (tap)="pushVillageChoicePage(2,'视频监控')"  (keypress)="pushVillageChoicePage(2,'视频监控')"
            class="royal-bg">
           <ion-icon class="icon-jiankong"></ion-icon>
           <h3 text-nowrap>视频监控</h3>
         </a>
-        <a tabindex="9" (click)="pushNewsPage(108,'联系服务群众')" (keypress)="pushNewsPage(108,'联系服务群众')"
+        <a tabindex="9" (tap)="pushNewsPage(108,'联系服务群众')"  (keypress)="pushNewsPage(108,'联系服务群众')"
            class="positive-bg">
           <ion-icon class="icon-phone"></ion-icon>
           <h3 text-nowrap>联系服务群众</h3>
@@ -76,16 +76,16 @@
       <video id="home-video" poster="assets/img/main/video.png" controls="controls" autoplay="autoplay"  loop  src="{{videoUrl}}">
       </video>
       <ion-col col-2>
-        <a tabindex="10" (click)="windowOpen('https://www.dtdjzx.gov.cn/')"
+        <a tabindex="10" (tap)="windowOpen('https://www.dtdjzx.gov.cn/')"
            (keypress)="windowOpen('https://www.dtdjzx.gov.cn/')" class="balanced-bg">
           <ion-icon class="icon-dengtalighthouse1"></ion-icon>
           <h3 text-nowrap>灯塔在线</h3>
         </a>
-        <a tabindex="11" (click)="pushNewsPage(107,'学习教育')" (keypress)="pushNewsPage(107,'学习教育')" class="calm-bg">
+        <a tabindex="11" (tap)="pushNewsPage(107,'学习教育')"  (keypress)="pushNewsPage(107,'学习教育')" class="calm-bg">
           <ion-icon class="icon-read"></ion-icon>
           <h3 text-nowrap>学习教育</h3>
         </a>
-        <a tabindex="12" (click)="pushNewsPage(109,'工作督查通报')" (keypress)="pushNewsPage(109,'工作督查通报')"
+        <a tabindex="12" (tap)="pushNewsPage(109,'工作督查通报')" (keypress)="pushNewsPage(109,'工作督查通报')"
            class="assertive-bg">
           <ion-icon class="icon-servicefill"></ion-icon>
           <h3 text-nowrap>工作督查通报</h3>
@@ -96,20 +96,20 @@
 
     <ion-row *ngIf="typeFlag==2" class="main-show sanwu" nowrap justify-content-center align-items-center text-center>
       <ion-col col-3>
-        <a tabindex="7" (click)="pushNewsPage(110,'党务公开')" (keypress)="pushNewsPage(110,'党务公开')" class="positive-bg">
+        <a tabindex="7" (tap)="pushNewsPage(110,'党务公开')" (keypress)="pushNewsPage(110,'党务公开')" class="positive-bg">
           <ion-icon class="icon-dangwugongkai"></ion-icon>
           <h3 text-nowrap>党务公开</h3>
         </a>
       </ion-col>
       <ion-col col-3>
-        <a tabindex="8" (click)="pushNewsPage(111,'政务公开')" (keypress)="pushNewsPage(111,'政务公开')" class="balanced-bg">
+        <a tabindex="8" (tap)="pushNewsPage(111,'政务公开')" (keypress)="pushNewsPage(111,'政务公开')" class="balanced-bg">
           <ion-icon class="icon-babyfill"></ion-icon>
           <h3 text-nowrap>政务公开</h3>
         </a>
       </ion-col>
 
       <ion-col col-3>
-        <a tabindex="9" (click)="pushNewsPage(112,'财务公开')" (keypress)="pushNewsPage(112,'财务公开')" class="yellow-bg">
+        <a tabindex="9" (tap)="pushNewsPage(112,'财务公开')" (keypress)="pushNewsPage(112,'财务公开')" class="yellow-bg">
           <ion-icon class="icon-sponsorfill"></ion-icon>
           <h3 text-nowrap>财务公开</h3>
         </a>
@@ -119,7 +119,7 @@
     <ion-row *ngIf="typeFlag==3" class="main-show dangyuan" nowrap justify-content-center align-items-center
              text-center>
       <ion-col col-3>
-        <a tabindex="7" (click)="pushNewsPage(114,'党员风采')" (keypress)="pushNewsPage(114,'党员风采')"
+        <a tabindex="7" (tap)="pushNewsPage(114,'党员风采')" (keypress)="pushNewsPage(114,'党员风采')"
            class="assertive-bg fengcai">
           <ion-icon class="icon-dangyuandangyuanguanlidangyuanzhuanchu"></ion-icon>
           <h3 text-nowrap>党员风采</h3>
@@ -128,22 +128,22 @@
       </ion-col>
 
       <ion-col col-3>
-        <a tabindex="8" (click)="pushNewsPage(113,'每月农话')" (keypress)="pushNewsPage(113,'每月农话')" class="assertive-bg ">
+        <a tabindex="8" (tap)="pushNewsPage(113,'每月农话')" (keypress)="pushNewsPage(113,'每月农话')" class="assertive-bg ">
           <ion-icon class="icon-1"></ion-icon>
           <h3 text-nowrap>每月农话 </h3>
         </a>
-        <a tabindex="9" (click)="pushNewsPage(0,'党员承诺')" (keypress)="pushNewsPage(0,'党员承诺')" class="assertive-bg">
+        <a tabindex="9" (tap)="pushNewsPage(0,'党员承诺')" (keypress)="pushNewsPage(0,'党员承诺')" class="assertive-bg">
           <ion-icon class="icon-dangjian"></ion-icon>
           <h3 text-nowrap>党员承诺</h3>
         </a>
       </ion-col>
 
       <ion-col col-3>
-        <a tabindex="10" (click)="pushNewsPage(0,'党建论坛')" (keypress)="pushNewsPage(0,'党建论坛')" class="assertive-bg">
+        <a tabindex="10" (tap)="pushNewsPage(0,'党建论坛')" (keypress)="pushNewsPage(0,'党建论坛')" class="assertive-bg">
           <ion-icon class="icon-community"></ion-icon>
           <h3 text-nowrap>党建论坛</h3>
         </a>
-        <a tabindex="11" (click)="pushNewsPage(115,'两学一做')" (keypress)="pushNewsPage(115,'两学一做')" class="assertive-bg">
+        <a tabindex="11" (tap)="pushNewsPage(115,'两学一做')" (keypress)="pushNewsPage(115,'两学一做')" class="assertive-bg">
           <ion-icon class="icon-friendfamous"></ion-icon>
           <h3 text-nowrap>两学一做</h3>
         </a>
@@ -152,7 +152,7 @@
     </ion-row>
     <ion-row *ngIf="typeFlag==4" class="main-show fupin" nowrap justify-content-center align-items-center text-center>
       <ion-col col-3>
-        <a tabindex="7" (click)="pushNewsPage(116,'扶贫政策学习')" (keypress)="pushNewsPage(116,'扶贫政策学习')"
+        <a tabindex="7" (tap)="pushNewsPage(116,'扶贫政策学习')" (keypress)="pushNewsPage(116,'扶贫政策学习')"
            class="positive-bg zhengce">
           <ion-icon class="icon-fupingongzuokaizhan"></ion-icon>
           <h3 text-nowrap>扶贫政策学习</h3>
@@ -161,23 +161,23 @@
       </ion-col>
 
       <ion-col col-3>
-        <a tabindex="8" (click)="pushNewsPage(117,'扶贫产业项目')" (keypress)="pushNewsPage(117,'扶贫产业项目')"
+        <a tabindex="8" (tap)="pushNewsPage(117,'扶贫产业项目')" (keypress)="pushNewsPage(117,'扶贫产业项目')"
            class="assertive-bg ">
           <ion-icon class="icon-taoxiaopu"></ion-icon>
           <h3 text-nowrap>扶贫产业项目 </h3>
         </a>
-        <a tabindex="9" (click)="pushNewsPage(118,'扶贫公示公告')" (keypress)="pushNewsPage(118,'扶贫公示公告')" class="yellow-bg">
+        <a tabindex="9" (tap)="pushNewsPage(118,'扶贫公示公告')" (keypress)="pushNewsPage(118,'扶贫公示公告')" class="yellow-bg">
           <ion-icon class="icon-gonggao"></ion-icon>
           <h3 text-nowrap>扶贫公示公告</h3>
         </a>
       </ion-col>
 
       <ion-col col-3>
-        <a tabindex="10" (click)="pushNewsPage(119,'志愿服务')" (keypress)="pushNewsPage(119,'志愿服务')" class="energized-bg">
+        <a tabindex="10" (tap)="pushNewsPage(119,'志愿服务')" (keypress)="pushNewsPage(119,'志愿服务')" class="energized-bg">
           <ion-icon class="icon-zhiyuanfuwu"></ion-icon>
           <h3 text-nowrap>志愿服务</h3>
         </a>
-        <a tabindex="11" (click)="pushNewsPage(120,'第一书记专栏')" (keypress)="pushNewsPage(120,'第一书记专栏')"
+        <a tabindex="11" (tap)="pushNewsPage(120,'第一书记专栏')" (keypress)="pushNewsPage(120,'第一书记专栏')"
            class="balanced-bg">
           <ion-icon class="icon-hotfill"></ion-icon>
           <h3 text-nowrap>第一书记专栏</h3>
@@ -187,7 +187,7 @@
     </ion-row>
     <ion-row *ngIf="typeFlag==5" class="main-show damei" nowrap justify-content-center align-items-center text-center>
       <ion-col col-2>
-        <a tabindex="7" (click)="pushNewsPage(106,'大美莒县')" (keypress)="pushNewsPage(106,'大美莒县')" class="calm-bg juxian">
+        <a tabindex="7" (tap)="pushNewsPage(106,'大美莒县')" (keypress)="pushNewsPage(106,'大美莒县')" class="calm-bg juxian">
           <!--    <img  src="assets/img/main/juxian.png"/>-->
           <ion-icon class="icon-shanshui"></ion-icon>
           <h3 text-nowrap>大美莒县</h3>
@@ -195,11 +195,11 @@
       </ion-col>
 
       <ion-col col-2>
-        <a tabindex="8" (click)="pushNewsPage(121,'特色农产')" (keypress)="pushNewsPage(121,'特色农产')" class="balanced-bg">
+        <a tabindex="8" (tap)="pushNewsPage(121,'特色农产')" (keypress)="pushNewsPage(121,'特色农产')" class="balanced-bg">
           <ion-icon class="icon-1"></ion-icon>
           <h3 text-nowrap>特色农产</h3>
         </a>
-        <a tabindex="9" (click)="pushNewsPage(142,'随手拍 曝光台')" (keypress)="pushNewsPage(142,'随手拍 曝光台')"
+        <a tabindex="9" (tap)="pushNewsPage(142,'随手拍 曝光台')" (keypress)="pushNewsPage(142,'随手拍 曝光台')"
            class="assertive-bg">
           <ion-icon class="icon-camerafill"></ion-icon>
           <h3 text-nowrap>随手拍 曝光台</h3>
@@ -207,22 +207,22 @@
       </ion-col>
 
       <ion-col col-2>
-        <a tabindex="10" (click)="pushNewsPage(122,'龙头企业')" (keypress)="pushNewsPage(122,'龙头企业')" class="positive-bg">
+        <a tabindex="10" (tap)="pushNewsPage(122,'龙头企业')" (keypress)="pushNewsPage(122,'龙头企业')" class="positive-bg">
           <ion-icon class="icon-qi"></ion-icon>
           <h3 text-nowrap>龙头企业</h3>
         </a>
-        <a tabindex="11" (click)="pushNewsPage(124,'乡村美景')" (keypress)="pushNewsPage(124,'乡村美景')" class="balanced-bg">
+        <a tabindex="11" (tap)="pushNewsPage(124,'乡村美景')" (keypress)="pushNewsPage(124,'乡村美景')" class="balanced-bg">
           <ion-icon class="icon-meijingzhuizong"></ion-icon>
           <h3 text-nowrap>乡村美景</h3>
         </a>
       </ion-col>
 
       <ion-col col-2>
-        <a tabindex="13" (click)="pushNewsPage(123,'莒县播报')" (keypress)="pushNewsPage(123,'莒县播报')" class="energized-bg">
+        <a tabindex="13" (tap)="pushNewsPage(123,'莒县播报')" (keypress)="pushNewsPage(123,'莒县播报')" class="energized-bg">
           <ion-icon class="icon-global"></ion-icon>
           <h3 text-nowrap>莒县播报</h3>
         </a>
-        <a tabindex="14" (click)="pushNewsPage(141,'信息之窗')" (keypress)="pushNewsPage(141,'信息之窗')" class="royal-bg">
+        <a tabindex="14" (tap)="pushNewsPage(141,'信息之窗')" (keypress)="pushNewsPage(141,'信息之窗')" class="royal-bg">
           <ion-icon class="icon-newsfill"></ion-icon>
           <h3 text-nowrap>信息之窗</h3>
         </a>
@@ -242,7 +242,7 @@
     </ion-row>
     <ion-row *ngIf="typeFlag==6" class="main-show-hongse hongse" justify-content-center text-center>
       <a tabindex="{{index+13}}" (keypress)="pushFilmPage(item.id,$event)" col-2 *ngFor="let item of redFilms">
-        <img (click)="pushFilmPage(item.id,$event)" width="140px" height="180px" [src]="item.images.medium"
+        <img (tap)="pushFilmPage(item.id,$event)" width="140px" height="180px" [src]="item.images.medium"
              alt="{{item.alt}}"/>
         <h4 text-nowrap>{{item.title}}</h4>
       </a>

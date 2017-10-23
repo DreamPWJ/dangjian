@@ -15,7 +15,7 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
 })
 export class VillageChoicePage {
   public videoType: any = {};
-  public villageType: number = 0;
+  public villageType: number = -1;
   public backgroundImage = 'assets/img/main/1.jpg';
   public villageData: any = [{
     name: "徐家村",

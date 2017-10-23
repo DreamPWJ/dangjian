@@ -8,7 +8,7 @@
   <ion-grid class="center-center " padding>
     <ion-row class="main-grid" justify-content-start  align-items-center text-center>
       <ion-col col-2 *ngFor="let item of villageData;let i=index;" margin>
-        <a tabindex="{{index}}"  (click)="pushLiveBroadcastPage(i,item.name,item.outerUrl,item.innerUrl)"
+        <a tabindex="{{index}}"  (tap)="pushLiveBroadcastPage(i,item.name,item.outerUrl,item.innerUrl)"
            (keypress)="pushLiveBroadcastPage(i,item.name,item.outerUrl,item.innerUrl)"
            color="{{villageType==i?'':'energized'}}" (focus)="villageFocus(i)" ion-button block large round>
           {{item.name}}

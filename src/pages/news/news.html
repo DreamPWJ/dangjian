@@ -19,7 +19,7 @@
   </div>
   <ion-list *ngIf="!isNotData" class="list"  >
 <!--    <ion-card>-->
-      <a tabindex="{{index+1}}"  ion-item *ngFor="let item of newsList" (click)="pushNewsDetailsPage(item.title,item.content)" (keypress)="pushNewsDetailsPage(item.title,item.content)"   >
+      <a tabindex="{{index+1}}"  ion-item *ngFor="let item of newsList" (tap)="pushNewsDetailsPage(item.title,item.content)"  (keypress)="pushNewsDetailsPage(item.title,item.content)"   >
         <ion-thumbnail item-start>
           <img src="{{apiUrl+item.img_url}}" onerror="this.src='assets/img/main/1.jpg'">
         </ion-thumbnail>
