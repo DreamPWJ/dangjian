@@ -14,7 +14,7 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
   templateUrl: 'live-broadcast.html',
 })
 export class LiveBroadcastPage {
-  public videoUrl: string = "http://u166.auto.s.wanglitiaoyi.com/live/3693838317.m3u8"  //AppGlobal.domain + "/upload/dy/yyzls/1.mp4";
+  public videoUrl: string = ""  //AppGlobal.domain + "/upload/dy/yyzls/1.mp4";
   public liveBroadcast: any = {};
   public videoType: number = 1;
 
@@ -28,7 +28,7 @@ export class LiveBroadcastPage {
   }
 
   ionViewDidEnter() {
-    this.switchVideo(this.liveBroadcast.type);
+    this.switchVideo(1);
   }
 
   /**
@@ -38,10 +38,10 @@ export class LiveBroadcastPage {
   switchVideo(type: number) {
     this.videoType = type;
     if (type == 1) {
-      this.videoUrl = "http://u166.auto.s.wanglitiaoyi.com/live/3693838317.m3u8"
+      this.videoUrl = this.liveBroadcast.outerUrl
     }
     if (type == 2) {
-      this.videoUrl = "http://u166.auto.s.wanglitiaoyi.com/live/3433230830.m3u8"
+      this.videoUrl = this.liveBroadcast.innerUrl
     }
   }
 }

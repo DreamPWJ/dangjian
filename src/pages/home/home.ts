@@ -59,6 +59,16 @@ export class HomePage {
   }
 
   /**
+   * 导航视频监控选择页面
+   */
+  pushVillageChoicePage(type: number, title: string) {
+    this.navCtrl.push('VillageChoicePage', {
+      type: type,
+      title: title
+    });
+  }
+
+  /**
    * 导航视频监控页面
    */
   pushLiveBroadcastPage(type: number, title: string) {
@@ -82,7 +92,7 @@ export class HomePage {
    * 导航外部网址页面
    */
   windowOpen(url: string) {
-    window.open(url,'_self ')
+    window.open(url, '_self ')
   }
 
   /**
