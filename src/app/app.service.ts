@@ -166,11 +166,11 @@ export class AppService {
     }
   }
 
-  getItem(key: string, callback) {
+  getItem(key: string) {
     try {
       var json = window.localStorage[key];
       var obj = JSON.parse(json);
-      callback(obj);
+      return obj;
     }
     catch (e) {
       console.error("window.localStorage error:" + e);

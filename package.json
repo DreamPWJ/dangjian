@@ -10,6 +10,7 @@
     "lint": "ionic-app-scripts lint",
     "ionic cordova platform rm android ": "ionic cordova platform rm android",
     "ionic cordova platform add android ": "ionic cordova platform add android",
+    "ionic cordova run android ": "ionic cordova run android  -l -c",
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
     "ionic cordova build android prod": "ionic cordova build android --prod"

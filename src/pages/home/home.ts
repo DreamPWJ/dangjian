@@ -12,9 +12,9 @@ export class HomePage {
   public videoUrl: string = this.domain + "/upload/dy/yyzls/1.mp4";
   public typeFlag: number = 1;
   public redFilms: any[];
-  public countryName:string="莒县"
+  public countryName: string = "莒县"
 
-  constructor(public navCtrl: NavController, public appService: AppService, public geolocation: Geolocation) {
+  constructor(public navCtrl: NavController, public appService: AppService, private  geolocation: Geolocation) {
   }
 
   ionViewDidLoad() {
@@ -23,6 +23,7 @@ export class HomePage {
     if (this.typeFlag == 6) { //红色影院
       this.getFilms();
     }
+
     /**
      * 地理定位
      */
@@ -36,26 +37,23 @@ export class HomePage {
         radius: 100,//	查询POI的半径范围。取值范围：0~3000,单位：米
         extensions: 'base',//返回结果控制
         batch: false, //batch=true为批量查询。batch=false为单点查询
-        roadlevel: 0, //可选值：1，当roadlevel=1时，过滤非主干道路，仅输出主干道路数据
-        isHideLoad: true
+        roadlevel: 0 //可选值：1，当roadlevel=1时，过滤非主干道路，仅输出主干道路数据
       }, (data) => {
         console.log(data);
         if (data.infocode == 10000) {
-          this.countryName = data.regeocode.addressComponent.township.replace(/镇/g,'');
+          this.countryName = data.regeocode.addressComponent.township.replace(/镇/g, '').replace(/街道/g, '');
         }
-
-      }, )
+      },)
     }).catch((error) => {
       console.log('Error getting location', error);
     });
-
-
   }
 
   ionViewDidEnter() {
     if (this.typeFlag == 1) {//智慧党建
       this.playPause(0);
     }
+
   }
 
   ionViewWillLeave() {
