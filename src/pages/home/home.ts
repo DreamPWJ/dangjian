@@ -9,7 +9,7 @@ import {Geolocation} from '@ionic-native/geolocation';
 })
 export class HomePage {
   public domain: string = AppGlobal.domain
-  public videoUrl: string = this.domain + "/upload/dy/yyzls/1.mp4";
+  public videoUrl: string = this.domain + "/upload/shijiuda.mp4";
   public typeFlag: number = 1;
   public redFilms: any[];
   public countryName: string = "莒县"
