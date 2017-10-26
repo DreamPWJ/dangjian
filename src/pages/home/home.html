@@ -242,7 +242,7 @@
     </ion-row>
     <ion-row *ngIf="typeFlag==6" class="main-show-hongse hongse" justify-content-center text-center>
       <a tabindex="{{index+13}}" (keypress)="pushFilmPage(item.id,$event)" col-2 *ngFor="let item of redFilms">
-        <img (tap)="pushFilmPage(item.id,$event)" width="140px" height="180px" [src]="item.images.medium"
+        <img (tap)="pushFilmPage(item.id,$event)" onerror="this.src='assets/img/main/0.jpg'"  width="140px" height="180px" [src]="item.images.medium"
              alt="{{item.alt}}"/>
         <h4 text-nowrap>{{item.title}}</h4>
       </a>
