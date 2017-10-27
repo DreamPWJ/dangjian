@@ -46,11 +46,11 @@ export class AppService {
     this.http.get(url + this.encode(params))
       .toPromise()
       .then(res => {
-        var d = res.json();
+        var data = res.json();
         if (loader) {
           loading.dismiss();
         }
-        callback(d == null ? "[]" : d);
+        callback(data);
       })
       .catch(error => {
         if (loader) {
@@ -68,11 +68,11 @@ export class AppService {
     this.http.post(url, params)
       .toPromise()
       .then(res => {
-        var d = res.json();
+        var data = res.json();
         if (loader) {
           loading.dismiss();
         }
-        callback(d == null ? "[]" : d);
+        callback(data);
       }).catch(error => {
       if (loader) {
         loading.dismiss();
@@ -83,8 +83,12 @@ export class AppService {
 
   private handleError(error: Response | any) {
     let msg = '';
+    if (error.status == 0) {
+      msg = '请求未初始化';
+      console.log('请求未初始化');
+    }
     if (error.status == 400) {
-      msg = '请求无效(code：404)';
+      msg = '请求无效(code：400)';
       console.log('请检查参数类型是否匹配');
     }
     if (error.status == 404) {
@@ -93,7 +97,7 @@ export class AppService {
     }
     if (error.status == 500) {
       msg = '服务器发生错误(code：500)';
-      console.error(msg + '，请检查路径是否正确');
+      console.error(msg + '，请检查服务器接口');
     }
     console.log(error);
     if (msg != '') {
