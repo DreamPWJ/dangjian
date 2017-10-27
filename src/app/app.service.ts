@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {LoadingController, AlertController, ToastController, Toast} from 'ionic-angular';
+import {NavController, App} from "ionic-angular/index";
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
@@ -18,9 +19,11 @@ export class AppGlobal {
 
 @Injectable()
 export class AppService {
+  private nav: NavController;
   public toasts: Toast;
 
-  constructor(public http: Http, public loadingCtrl: LoadingController, private alertCtrl: AlertController, private toastCtrl: ToastController,) {
+  constructor(public http: Http, private app: App, public loadingCtrl: LoadingController, private alertCtrl: AlertController, private toastCtrl: ToastController,) {
+    this.nav = this.app.getActiveNav();
   }
 
   // 对参数进行编码
@@ -188,12 +191,12 @@ export class AppService {
     if (!localStorage.getItem("userid")) {
       if (isShow) {
         this.confirm("登录", "登录体验更完善功能", () => {
-/*          this.navCtrl.push('LoginPage')*/
+          this.nav.push('LoginPage')
         }, "登录", "暂不登录", () => {
-   /*       this.navCtrl.pop();*/
+          this.nav.pop();
         })
       } else {
-        /*       this.navCtrl.push('LoginPage')*/
+        this.nav.push('LoginPage')
       }
       return true;
     } else {
