@@ -13,7 +13,7 @@
   <ion-row class="main-show full-screen" nowrap  align-items-center
            text-center>
     <ion-col col-2  class="buttons">
-      <a tabindex="1" autofocus (tap)="switchVideo(1)" (focus)="switchVideo(1)"  color="{{videoType==1?'':'light'}}" ion-button block large round>
+      <a tabindex="1"  (tap)="switchVideo(1)" (focus)="switchVideo(1)"  color="{{videoType==1?'':'light'}}" ion-button block large round>
         <ion-icon margin-right class="{{liveBroadcast.type==1?'icon-recordfill':'icon-jiankong'}}"></ion-icon>
         {{liveBroadcast.name}}室外
       </a>
@@ -23,7 +23,7 @@
         {{liveBroadcast.name}}室内
       </a>
     </ion-col>
-    <video  poster="assets/img/main/1.jpg" controls="controls" autoplay="autoplay" src="{{videoUrl}}">
+    <video  poster="assets/img/main/1.jpg"  autoplay="autoplay" src="{{videoUrl}}">
     </video>
 
   </ion-row>
