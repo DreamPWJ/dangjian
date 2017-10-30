@@ -5,29 +5,36 @@ page-news {
   }
 
   .main-show .list {
-    width: 80%;
+    width: 86%;
     padding: 1rem 0;
-    background-color: rgba(255,255,255,0.1);
-    margin: calc(10vh - 50px) auto 2rem;
+    background-color: rgba(0,0,0,0.2);
     min-height: 80vh;
     border-radius: 5px;
-    -webkit-box-shadow: 0 2px 3px  rgba(0, 0, 0, .3);
-    box-shadow: 0 2px 3px  rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
   }
 
   .main-show .item {
     padding: 0 2rem;
     background-color: transparent;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   }
-
+  .main-show img {
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+  }
   .main-show h2 {
+    padding: 0.1rem;
     font-size: 2rem;
     color: #fff;
   }
 
   .main-show a:hover, .main-show a:focus {
-    background-color: #f26604;
+    border: 3px solid #ffffff!important;
+    background-color: #ef473a;
     opacity: 1;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
   }
 
 }

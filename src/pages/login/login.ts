@@ -16,7 +16,7 @@ import {AppService} from "../../app/app.service";
 })
 export class LoginPage {
   public account: any = {user: "", password: ""}
-  public backgroundImage = 'assets/img/login/background.jpg';
+  public backgroundImage = 'assets/img/main/0.jpg';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService) {
   }

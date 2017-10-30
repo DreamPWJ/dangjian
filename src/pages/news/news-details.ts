@@ -16,6 +16,7 @@ import {AppService} from "../../app/app.service";
 })
 export class NewsDetailsPage {
   public newsDetailInfo:any={};
+  public backgroundImage = 'assets/img/main/0.jpg';
   constructor(public navCtrl: NavController, public navParams: NavParams,public  appService: AppService) {
     this.newsDetailInfo = navParams.data;
   }

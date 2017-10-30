@@ -19,6 +19,7 @@ export class NewsPage {
   public newsInfo: any = {};
   public newsList: any[];
   public isNotData: boolean = false;
+  public backgroundImage = 'assets/img/main/0.jpg';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public  appService: AppService) {
     this.newsInfo = navParams.data;
