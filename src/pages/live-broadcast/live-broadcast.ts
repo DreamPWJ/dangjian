@@ -17,6 +17,7 @@ export class LiveBroadcastPage {
   public videoUrl: string = ""  //AppGlobal.domain + "/upload/dy/yyzls/1.mp4";
   public liveBroadcast: any = {};
   public videoType: number = 1;
+  public backgroundImage = 'assets/img/main/0.jpg';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.liveBroadcast = navParams.data;
