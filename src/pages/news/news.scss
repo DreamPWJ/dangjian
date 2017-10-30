@@ -9,6 +9,8 @@ page-news {
     padding: 1rem 0;
     background-color: rgba(0,0,0,0.2);
     min-height: 80vh;
+    max-height: 90vh;
+    overflow:auto;
     border-radius: 5px;
     -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
     box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
