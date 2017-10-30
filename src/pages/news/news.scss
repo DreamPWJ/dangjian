@@ -6,12 +6,12 @@ page-news {
 
   .main-show .list {
     width: 86%;
-    padding: 1rem 0;
+    padding: 1px 0;
     background-color: rgba(0,0,0,0.2);
     min-height: 80vh;
     max-height: 90vh;
     overflow:auto;
-    border-radius: 5px;
+    border-radius: 10px;
     -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
     box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
   }
@@ -33,7 +33,7 @@ page-news {
 
   .main-show a:hover, .main-show a:focus {
     border: 3px solid #ffffff!important;
-    background-color: #ef473a;
+    background-color: #ef120a;
     opacity: 1;
     -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
     box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
