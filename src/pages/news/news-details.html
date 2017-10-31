@@ -6,11 +6,9 @@
 -->
 <ion-content  padding class="main-show transparent-header" [ngStyle]="{'background-image': 'url(' + backgroundImage +')', 'background-size': 'cover'}">
 <!--<ion-header no-border>
-
-  <ion-navbar color="clam">
+  <ion-navbar color="clam" hideBackButton>
     <ion-title>{{newsDetailInfo.title}}</ion-title>
   </ion-navbar>
-
 </ion-header>-->
 
 <div class="content center-center"   [innerHtml]="newsDetailInfo.content"></div>

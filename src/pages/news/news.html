@@ -5,11 +5,11 @@
   Ionic pages and navigation.
 -->
 <ion-content padding class="main-show transparent-header" [ngStyle]="{'background-image': 'url(' + backgroundImage +')', 'background-size': 'cover'}">
-<!--<ion-header no-border>
-  <ion-navbar color="clam">
+<ion-header no-border>
+  <ion-navbar color="clam" hideBackButton>
     <ion-title>{{newsInfo.title}}</ion-title>
   </ion-navbar>
-</ion-header>-->
+</ion-header>
 
   <div *ngIf="isNotData" class="isNotDataHint">
     <ion-icon class="icon-notice"></ion-icon>
