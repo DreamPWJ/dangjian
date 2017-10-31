@@ -31,7 +31,7 @@ page-home {
   .img-logo {
     margin: 0.5rem 0;
     width: 42rem;
-    height:7.6rem;
+    height: 7.6rem;
   }
 
   .top-btn {
@@ -210,4 +210,10 @@ page-home {
     font-weight: 600;
   }
 
+  .film-search a.film-type:focus, .film-search a.film-type:active {
+    box-sizing: border-box;
+    border: 3px solid #fff;
+    color: #fff;
+    background-color: #ef473a;
+  }
 }

@@ -126,10 +126,13 @@ export class HomePage {
    * 获取电影数据
    */
   getFilms() {
-    this.appService.httpGet("https://api.douban.com/v2/movie/search", {tag: "抗战", count: 13}, (data) => {
-      console.log(data);
-      this.redFilms = data.subjects;
-    }, true)
+    if(!this.redFilms){
+      this.appService.httpGet("https://api.douban.com/v2/movie/search", {tag: "抗战", count: 13}, (data) => {
+        console.log(data);
+        this.redFilms = data.subjects;
+      }, true)
+    }
+
   }
 
 
