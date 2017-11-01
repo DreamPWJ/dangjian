@@ -7,9 +7,9 @@ page-news {
   .main-show .list {
     width: 86%;
     padding: 1px 0;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     height: 80vh;
-    overflow:auto;
+    overflow: auto;
     border-radius: 5px;
     -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
     box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
@@ -31,11 +31,15 @@ page-news {
   }
 
   .main-show a:hover, .main-show a:focus {
-    border: 3px solid #ffffff!important;
+    border: 3px solid #ffffff !important;
     background-color: #ef120a;
     opacity: 1;
     -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
     box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
   }
-
+  .currentTime {
+    position: absolute;
+    top:0;
+    right: 6px;
+  }
 }

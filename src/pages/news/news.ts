@@ -20,12 +20,16 @@ export class NewsPage {
   public newsList: any[];
   public isNotData: boolean = false;
   public backgroundImage = 'assets/img/main/0.jpg';
+  public currentTime: any = new Date;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public  appService: AppService) {
     this.newsInfo = navParams.data;
   }
 
   ionViewDidLoad() {
+    setInterval(() => {
+      this.currentTime = new Date();
+    }, 30000)
     console.log('ionViewDidLoad NewsPage');
 
   }
@@ -33,6 +37,7 @@ export class NewsPage {
   ionViewDidEnter() {
     this.getNews(this.newsInfo.id);
   }
+
   /**
    * 获取新闻数据
    */
@@ -52,10 +57,12 @@ export class NewsPage {
    * 导航新闻详情页面
    * @param id
    */
-  pushNewsDetailsPage(title: string,content:string) {
+  pushNewsDetailsPage(title: string, content: string) {
     this.navCtrl.push('NewsDetailsPage', {
-      title:title,
-      content:content
+      title: title,
+      content: content
     });
   }
+
+
 }
