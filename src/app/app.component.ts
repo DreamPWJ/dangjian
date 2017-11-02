@@ -38,7 +38,7 @@ export class MyApp {
       }
       //如果想点击返回按钮隐藏toast或loading或Overlay就把下面加上
       // this.ionicApp._toastPortal.getActive() || this.ionicApp._loadingPortal.getActive() || this.ionicApp._overlayPortal.getActive()
-      let activePortal = this.ionicApp._modalPortal.getActive();
+      let activePortal = this.ionicApp._modalPortal.getActive() || this.ionicApp._loadingPortal.getActive() || this.ionicApp._overlayPortal.getActive();
       if (activePortal) {
         activePortal.dismiss().catch(() => {
         });
